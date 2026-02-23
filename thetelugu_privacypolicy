@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Politique de Confidentialité - The Telugu</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        .container {
+            background: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #34495e;
+            margin-top: 30px;
+        }
+        p, li {
+            font-size: 16px;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        .footer {
+            margin-top: 50px;
+            font-size: 0.9em;
+            color: #7f8c8d;
+            text-align: center;
+        }
+        .highlight {
+            color: #e67e22;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Politique de Confidentialité</h1>
+        <p><strong>Dernière mise à jour :</strong> 24 Mai 2024</p>
+
+        <p>La présente Politique de Confidentialité décrit comment vos informations sont collectées, utilisées et protégées lors de l'utilisation de l'application <strong>The Telugu</strong>. Nous nous engageons à respecter la vie privée de nos utilisateurs et à traiter leurs données avec la plus grande transparence.</p>
+
+        <h2>1. Informations que nous collectons</h2>
+        <p>Nous collectons les données nécessaires au bon fonctionnement de l'application, à la progression pédagogique et à la gestion du classement :</p>
+        <ul>
+            <li><strong>Informations de compte :</strong> Lors de l'utilisation de services d'authentification (Google, Apple ou Email), nous collectons votre adresse e-mail et votre identifiant unique (UID).</li>
+            <li><strong>Profil utilisateur :</strong> Vous pouvez choisir un pseudonyme. Pour garantir l'unicité, une version normalisée (minuscules) est stockée.</li>
+            <li><strong>Données de progression :</strong> Nous enregistrons vos scores (Total Om), votre niveau, vos statistiques de jeu (fusions, bulles), ainsi que l'avancement de vos leçons et exercices.</li>
+            <li><strong>Données techniques :</strong> Vos préférences de réglages (langue, mode sombre, notifications, vibration) sont conservées.</li>
+            <li><strong>Utilisateurs Invités :</strong> Pour les comptes non authentifiés, les données sont stockées localement sur votre appareil.</li>
+        </ul>
+
+        <h2>2. Utilisation des données</h2>
+        <p>Vos données sont traitées pour les finalités suivantes :</p>
+        <ul>
+            <li><strong>Synchronisation :</strong> Permettre de retrouver votre progression sur différents appareils.</li>
+            <li><strong>Classement (Leaderboard) :</strong> Afficher votre pseudonyme et votre score total dans le classement mondial et par exercice.</li>
+            <li><strong>Notifications :</strong> Envoi de rappels quotidiens d'apprentissage ou alertes de réactivation.</li>
+            <li><strong>Publicité :</strong> L'application utilise <strong>Google AdMob</strong> pour diffuser des publicités finançant le service.</li>
+        </ul>
+
+        <h2>3. Partage et visibilité des données</h2>
+        <ul>
+            <li><strong>Données Publiques :</strong> Votre pseudonyme et votre score total sont visibles par tous via le classement global.</li>
+            <li><strong>Données Privées :</strong> Vos informations personnelles (e-mail) et le détail de vos réglages ne sont accessibles que par vous-même via une authentification sécurisée.</li>
+            <li><strong>Services Tiers :</strong> Utilisation de <strong>Firebase</strong> (hébergement/authentification) et <strong>AdMob</strong> (publicité).</li>
+        </ul>
+
+        <h2>4. Sécurité et Stockage</h2>
+        <p>Vos données sont protégées par les règles de sécurité de <strong>Firebase Cloud Firestore</strong>. Ces règles garantissent que seul le propriétaire d'un compte peut lire ou modifier ses propres données privées.</p>
+
+        <h2>5. Vos droits (Suppression des données)</h2>
+        <p>Vous disposez d'un contrôle total sur vos données :</p>
+        <ul>
+            <li><strong>Suppression du compte :</strong> Vous pouvez demander la suppression de votre compte depuis l'application.</li>
+            <li><strong>Droit à l'oubli :</strong> La suppression d'un compte entraîne l'effacement automatique de votre profil, pseudonyme, scores au classement et historiques d'exercices.</li>
+        </ul>
+
+        <h2>6. Publicité et Cookies</h2>
+        <p>Google AdMob peut utiliser des identifiants publicitaires. Vous pouvez gérer ces préférences dans les réglages système de votre appareil (Android/iOS).</p>
+
+        <h2>7. Contact</h2>
+        <p>Pour toute question concernant vos données personnelles, contactez-nous à : <span class="highlight">[VOTRE_EMAIL_ICI]</span>.</p>
+
+        <div class="footer">
+            &copy; 2024 The Telugu. Tous droits réservés.
+        </div>
+    </div>
+</body>
+</html>
