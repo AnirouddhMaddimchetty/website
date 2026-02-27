@@ -1,73 +1,127 @@
-import styles from "../../blog/blog.module.css";
-import Link from "next/link";
+'use client';
 
-export default function Terms() {
+import { useState } from 'react';
+import styles from '../LegalPage.module.css';
+import Link from 'next/link';
+
+const CONTENT = {
+  fr: {
+    title: "Conditions Générales d'Utilisation",
+    lastUpdated: "Dernière mise à jour : 27 Février 2026",
+    warning: "Ce document régit l'utilisation de l'application « The Telugu ». En utilisant l'application, vous acceptez ces termes. Si vous ne les acceptez pas, veuillez ne pas l'utiliser.",
+    sections: [
+      {
+        title: "1. Présentation du Service",
+        content: "The Telugu est une application mobile dédiée à l'apprentissage de la langue Telugu via des leçons interactives, un système de progression et des contenus multimédias."
+      },
+      {
+        title: "2. Compte Utilisateur",
+        content: "Vous pouvez utiliser l'application anonymement ou créer un compte (Email, Google, Apple). Vous êtes responsable de la sécurité de vos identifiants. La suppression du compte est possible à tout moment depuis les réglages."
+      },
+      {
+        title: "3. Système de Progression (Om)",
+        content: "L'application utilise une monnaie virtuelle appelée « Om ». Ces points n'ont aucune valeur monétaire réelle, ne sont pas transférables et ne peuvent pas être convertis en argent réel."
+      },
+      {
+        title: "4. Publicités",
+        content: "The Telugu utilise Google AdMob pour afficher des publicités (bannières, interstitiels, vidéos récompensées). En utilisant l'application, vous acceptez cet affichage qui permet de maintenir le service gratuit."
+      },
+      {
+        title: "5. Propriété Intellectuelle",
+        content: "Tous les contenus (textes, audios, graphismes) sont la propriété exclusive de The Telugu. Toute reproduction ou extraction sans autorisation est strictement interdite."
+      },
+      {
+        title: "6. Limitation de Responsabilité",
+        content: "L'application est fournie « en l'état ». Nous ne garantissons pas l'absence d'erreurs ou l'infaillibilité du service. Nous ne sommes pas responsables des pertes de progression techniques."
+      }
+    ],
+    footer: "Pour toute question, contactez-nous : support@thetelugu.com",
+    policyLink: "Consulter la Politique de Confidentialité"
+  },
+  en: {
+    title: "Terms and Conditions",
+    lastUpdated: "Last updated: February 27, 2026",
+    warning: "This document governs the use of the 'The Telugu' application. By using the app, you agree to these terms. If you do not agree, please do not use the application.",
+    sections: [
+      {
+        title: "1. Service Overview",
+        content: "The Telugu is a mobile application dedicated to learning the Telugu language through interactive lessons, a progression system, and multimedia content."
+      },
+      {
+        title: "2. User Account",
+        content: "You can use the app anonymously or create an account (Email, Google, Apple). You are responsible for your login security. Account deletion is available anytime in settings."
+      },
+      {
+        title: "3. Progression System (Om)",
+        content: "The app uses a virtual currency called 'Om'. These points have no real monetary value, are not transferable, and cannot be converted into real currency."
+      },
+      {
+        title: "4. Advertisements",
+        content: "The Telugu uses Google AdMob to display ads (banners, interstitials, rewarded videos). By using the app, you accept these ads which keep the service free of charge."
+      },
+      {
+        title: "5. Intellectual Property",
+        content: "All content (text, audio, graphics) is the exclusive property of The Telugu. Any reproduction or extraction without permission is strictly prohibited."
+      },
+      {
+        title: "6. Limitation of Liability",
+        content: "The application is provided 'as is'. We do not guarantee error-free or infallible service. We are not responsible for technical progression losses."
+      }
+    ],
+    footer: "Questions? Contact us: support@thetelugu.com",
+    policyLink: "View Privacy Policy"
+  }
+};
+
+export default function TermsPage() {
+  const [lang, setLang] = useState<'fr' | 'en'>('fr');
+  const t = CONTENT[lang];
+
   return (
-    <div className="container">
-      <article className={styles.singlePost}>
-        <header className={styles.postHeader}>
-          <p className={styles.date}>Dernière mise à jour : 23 Février 2026</p>
-          <h1>Conditions Générales d'Utilisation (CGU)</h1>
-        </header>
-        <div className={styles.content}>
-          <div style={{ backgroundColor: '#fff3cd', color: '#856404', padding: '1.5rem', borderRadius: '8px', borderLeft: '4px solid #ffeeba', marginBottom: '2rem' }}>
-            <strong>Avertissement :</strong> Ce document régit l'utilisation de l'application « The Telugu ». En téléchargeant, installant ou utilisant l'application, vous acceptez d'être lié par les présentes Conditions Générales d'Utilisation. Si vous n'acceptez pas ces termes, veuillez ne pas utiliser l'application.
-          </div>
-
-          <h2>1. Présentation du Service</h2>
-          <p><strong>The Telugu</strong> est une application mobile destinée à l'apprentissage de la langue Telugu. L'application propose des leçons, un système de progression par niveaux et divers contenus multimédias interactifs (audio, vidéos, images) pour faciliter l'apprentissage.</p>
-
-          <h2>2. Création de Compte et Sécurité</h2>
-          <p>Pour accéder à certaines fonctionnalités, vous pouvez créer un compte utilisateur :</p>
-          <ul>
-            <li><strong>Méthodes de connexion :</strong> L'application vous permet de vous connecter via une adresse e-mail et un mot de passe, ou via des services tiers sécurisés (Google Sign-In, Apple Sign-In).</li>
-            <li><strong>Utilisation Anonyme :</strong> Il est également possible d'utiliser l'application en mode "Invité" (connexion anonyme) sans fournir d'informations personnelles immédiates.</li>
-            <li><strong>Informations de profil :</strong> Lors de la création de votre profil, vous pourrez choisir un pseudonyme ("nickname"). Vous êtes responsable du maintien de la confidentialité de vos identifiants de connexion.</li>
-            <li><strong>Suppression de compte :</strong> Vous pouvez à tout moment demander la suppression définitive de votre compte et des données associées directement depuis les paramètres de l'application.</li>
-          </ul>
-
-          <h2>3. Progression et Monnaie Virtuelle</h2>
-          <p>L'application intègre un système de progression basé sur des niveaux et une monnaie/ressource virtuelle appelée <strong>« Om »</strong>.</p>
-          <ul>
-            <li>Ces ressources virtuelles (Om) sont accumulées lors de votre utilisation et réussite au sein de l'application. Elles n'ont <strong>aucune valeur monétaire réelle</strong>.</li>
-            <li>Elles ne peuvent être ni échangées, ni vendues, ni transférées en dehors de l'écosystème de l'application.</li>
-            <li>Les administrateurs de The Telugu se réservent le droit de modifier le système d'attribution, d'ajuster l'équilibrage du jeu ou de réinitialiser les points en cas de dysfonctionnement technique ou de comportement abusif.</li>
-          </ul>
-
-          <h2>4. Publicités</h2>
-          <p>Pour maintenir l'application gratuite et financer son développement continu, The Telugu intègre des publicités (gérées via des régies publicitaires telles que Google AdMob). En utilisant l'application, vous acceptez l'affichage de :</p>
-          <ul>
-            <li><strong>Bannières publicitaires :</strong> affichées de manière non intrusive sur certaines pages.</li>
-            <li><strong>Publicités interstitielles :</strong> affichées en plein écran lors de transitions logiques (par exemple, entre deux leçons ou niveaux).</li>
-            <li><strong>Publicités avec récompense (Rewarded Ads) :</strong> que vous pouvez choisir de visionner volontairement en l'échange d'une récompense virtuelle dans l'application (par exemple, obtenir des "Om" supplémentaires).</li>
-          </ul>
-
-          <h2>5. Données Personnelles et Confidentialité</h2>
-          <p>L'application collecte et traite certaines données pour fonctionner correctement (notamment via Firebase pour l'authentification, la sauvegarde de votre progression dans le cloud, et des analyses d'utilisation anonymisées).</p>
-          <p>Pour comprendre en détail comment nous collectons, utilisons et protégeons vos données, veuillez consulter notre <Link href="/thetelugu/confidentialite">Politique de Confidentialité</Link>.</p>
-
-          <h2>6. Propriété Intellectuelle</h2>
-          <p>Tous les contenus présents dans l'application The Telugu (textes, leçons, fichiers audio interactifs, éléments graphiques, icônes, animations, etc.) sont la propriété exclusive de The Telugu ou de ses concédants. L'application vous est concédée sous licence pour un usage personnel, éducatif et non commercial. Toute reproduction, distribution, extraction de données ou modification du code et du contenu sans autorisation expresse est strictement interdite.</p>
-
-          <h2>7. Comportement de l'Utilisateur</h2>
-          <p>En utilisant The Telugu, vous vous engagez à :</p>
-          <ul>
-            <li>Ne pas utiliser l'application à des fins illégales ou non prévues par ces CGU.</li>
-            <li>Ne pas tenter d'altérer le code, de pirater le système de progression, de générer artificiellement de la monnaie virtuelle ("Om") ou de contourner les systèmes publicitaires de l'application.</li>
-            <li>Garder un comportement respectueux envers le service et les autres utilisateurs dans l'éventualité où des fonctionnalités sociales (classements, forums) seraient déployées.</li>
-          </ul>
-
-          <h2>8. Limitation de Responsabilité</h2>
-          <p>L'application The Telugu est fournie « en l'état » et « selon la disponibilité ». Bien que nous nous efforcions d'offrir le meilleur contenu pédagogique possible, nous ne garantissons pas l'absence d'erreurs ni que l'application soit exempte de bugs. The Telugu ne saurait être tenu responsable des problèmes techniques, des éventuelles pertes de données de progression sur votre appareil ou dans le cloud, ni des interruptions temporaires ou permanentes du service.</p>
-
-          <h2>9. Modifications des CGU</h2>
-          <p>Nous nous réservons le droit de mettre à jour ou de modifier ces Conditions Générales d'Utilisation à tout moment. En cas de modification substantielle, nous vous en informerons par une notification au sein de l'application. Le fait de continuer à utiliser l'application après la publication des modifications vaut acceptation de ces dernières.</p>
-
-          <h2>10. Nous Contacter</h2>
-          <p>Si vous avez des questions, des suggestions ou des préoccupations concernant ces conditions d'utilisation, le fonctionnement de l'application, ou si vous souhaitez exercer vos droits sur vos données personnelles, vous pouvez nous contacter à l'adresse suivante :</p>
-          <p><strong>Email :</strong> <a href="mailto:support@thetelugu.com">support@thetelugu.com</a></p>
+    <div className={styles.legalContainer}>
+      <header className={styles.header}>
+        <div className={styles.headerTitle}>
+          <h1>{t.title}</h1>
+          <p className={styles.lastUpdated}>{t.lastUpdated}</p>
         </div>
-      </article>
+        <div className={styles.langSwitcher}>
+          <button 
+            className={`${styles.langBtn} ${lang === 'fr' ? styles.langBtnActive : ''}`}
+            onClick={() => setLang('fr')}
+          >
+            FR
+          </button>
+          <button 
+            className={`${styles.langBtn} ${lang === 'en' ? styles.langBtnActive : ''}`}
+            onClick={() => setLang('en')}
+          >
+            EN
+          </button>
+        </div>
+      </header>
+
+      <div className={styles.alertBox}>
+        {t.warning}
+      </div>
+
+      <div className={styles.content}>
+        {t.sections.map((section, index) => (
+          <section key={index}>
+            <h2>{section.title}</h2>
+            <p>{section.content}</p>
+          </section>
+        ))}
+        
+        <p style={{ marginTop: '2rem' }}>
+          <Link href="/thetelugu/confidentialite" style={{ color: 'var(--accent-color)', fontWeight: 'bold' }}>
+            → {t.policyLink}
+          </Link>
+        </p>
+      </div>
+
+      <footer className={styles.footerNote}>
+        {t.footer}
+      </footer>
     </div>
   );
 }
