@@ -14,21 +14,6 @@ export default function Home() {
           <Link href="/blog" className={styles.btnSecondary}>Lire mon blog</Link>
         </div>
       </section>
-
-      <section className={styles.features}>
-        <div className={styles.card}>
-          <h3>Développement</h3>
-          <p>Création d'applications modernes et performantes avec les dernières technologies.</p>
-        </div>
-        <div className={styles.card}>
-          <h3>Apprentissage</h3>
-          <p>Partage de connaissances sur la langue Telugu et le développement logiciel.</p>
-        </div>
-        <div className={styles.card}>
-          <h3>Innovation</h3>
-          <p>Toujours à la recherche de nouvelles solutions pour des problèmes complexes.</p>
-        </div>
-      </section>
     </div>
   );
 }
