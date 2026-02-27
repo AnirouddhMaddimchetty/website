@@ -44,7 +44,7 @@ export default function Terms() {
 
           <h2>5. Données Personnelles et Confidentialité</h2>
           <p>L'application collecte et traite certaines données pour fonctionner correctement (notamment via Firebase pour l'authentification, la sauvegarde de votre progression dans le cloud, et des analyses d'utilisation anonymisées).</p>
-          <p>Pour comprendre en détail comment nous collectons, utilisons et protégeons vos données, veuillez consulter notre <Link href="/legal/confidentialite">Politique de Confidentialité</Link>.</p>
+          <p>Pour comprendre en détail comment nous collectons, utilisons et protégeons vos données, veuillez consulter notre <Link href="/thetelugu/confidentialite">Politique de Confidentialité</Link>.</p>
 
           <h2>6. Propriété Intellectuelle</h2>
           <p>Tous les contenus présents dans l'application The Telugu (textes, leçons, fichiers audio interactifs, éléments graphiques, icônes, animations, etc.) sont la propriété exclusive de The Telugu ou de ses concédants. L'application vous est concédée sous licence pour un usage personnel, éducatif et non commercial. Toute reproduction, distribution, extraction de données ou modification du code et du contenu sans autorisation expresse est strictement interdite.</p>
