@@ -35,7 +35,7 @@ const CONTENT = {
         content: "L'application est fournie « en l'état ». Nous ne garantissons pas l'absence d'erreurs ou l'infaillibilité du service. Nous ne sommes pas responsables des pertes de progression techniques."
       }
     ],
-    footer: "Pour toute question, contactez-nous : support@thetelugu.com",
+    footer: "Pour toute question, contactez-nous : anirouddh@gmail.com",
     policyLink: "Consulter la Politique de Confidentialité"
   },
   en: {
@@ -68,7 +68,7 @@ const CONTENT = {
         content: "The application is provided 'as is'. We do not guarantee error-free or infallible service. We are not responsible for technical progression losses."
       }
     ],
-    footer: "Questions? Contact us: support@thetelugu.com",
+    footer: "Questions? Contact us : anirouddh@gmail.com",
     policyLink: "View Privacy Policy"
   }
 };
