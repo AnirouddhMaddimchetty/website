@@ -1,18 +1,38 @@
+'use client';
+
+import { useEffect, useState } from "react";
 import styles from "./page.module.css";
-import Image from "next/image";
 import Link from "next/link";
 
 export default function TheTeluguLanding() {
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <div className={styles.landingWrapper}>
       {/* Hero Section */}
       <header className={styles.hero}>
+        <div 
+          className={styles.parallaxBg} 
+          style={{ transform: `translateY(${scrollY * 0.3}px)` }}
+        ></div>
         <div className="container">
           <div className={styles.heroContent}>
             <div className={styles.logoContainer}>
               <img src="/thetelugu/assets/logo.png" alt="The Telugu Logo" className={styles.logo} />
             </div>
-            <h1 className={styles.title}>L'essence du Telugu <br /> <span className={styles.gradient}>dans votre poche.</span></h1>
+            <h1 className={styles.title}>
+              L'essence du Telugu <br /> 
+              <span className={styles.gradient}>dans votre poche.</span>
+            </h1>
             <p className={styles.subtitle}>
               Une application moderne pour apprendre, se connecter et célébrer la richesse de la culture Telugu. 
               Conçue pour la nouvelle génération.
@@ -34,19 +54,19 @@ export default function TheTeluguLanding() {
         <div className="container">
           <div className={styles.featureGrid}>
             <div className={styles.featureCard}>
-              <div className={styles.icon}>🗣️</div>
+              <div className={styles.icon} style={{ transform: `translateY(${scrollY * -0.05}px)` }}>🗣️</div>
               <h3>Apprentissage Immersif</h3>
               <p>Des leçons interactives conçues pour vous faire parler Telugu dès le premier jour.</p>
             </div>
             <div className={styles.featureCard}>
-              <div className={styles.icon}>🏺</div>
+              <div className={styles.icon} style={{ transform: `translateY(${scrollY * -0.08}px)` }}>🏺</div>
               <h3>Héritage Culturel</h3>
               <p>Explorez l'histoire, la littérature et les traditions qui font la beauté du peuple Telugu.</p>
             </div>
             <div className={styles.featureCard}>
-              <div className={styles.icon}>🛡️</div>
+              <div className={styles.icon} style={{ transform: `translateY(${scrollY * -0.1}px)` }}>🛡️</div>
               <h3>Sécurisé & Privé</h3>
-              <p>Vos données sont protégées. Apprenez en toute sérénité dans un environnement respectueux.</p>
+              <p>Vos données sont protégées. Apprenez en toute serrénité dans un environnement respectueux.</p>
             </div>
           </div>
         </div>
@@ -64,7 +84,12 @@ export default function TheTeluguLanding() {
               </p>
             </div>
             <div className={styles.showcaseImage}>
-              <img src="/thetelugu/assets/mockup.svg" alt="App Mockup" className={styles.mockup} />
+              <img 
+                src="/thetelugu/assets/mockup.svg" 
+                alt="App Mockup" 
+                className={styles.mockup} 
+                style={{ transform: `translateY(${Math.max(0, (scrollY - 500) * -0.15)}px)` }}
+              />
             </div>
           </div>
         </div>
