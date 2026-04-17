@@ -1,98 +1,114 @@
 .legalContainer {
-  max-width: 900px;
+  max-width: 800px;
   margin: 4rem auto;
-  padding: 0 1.5rem;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
   color: var(--primary-color);
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
 .header {
-  border-bottom: 2px solid var(--accent-color);
-  margin-bottom: 3rem;
-  padding-bottom: 1.5rem;
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: flex-start;
+  margin-bottom: 3rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 2rem;
 }
 
 .headerTitle h1 {
   font-size: 2.5rem;
-  margin: 0;
-  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .lastUpdated {
-  font-size: 0.9rem;
   color: var(--text-muted);
-  margin-top: 0.5rem;
+  font-size: 0.9rem;
 }
 
 .langSwitcher {
   display: flex;
   gap: 0.5rem;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 4px;
+  border-radius: 12px;
 }
 
 .langBtn {
-  background: none;
-  border: 1px solid var(--text-muted);
-  padding: 0.4rem 0.8rem;
-  cursor: pointer;
-  border-radius: 4px;
-  font-size: 0.8rem;
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+  background: transparent;
   color: var(--text-muted);
-  transition: all 0.2s;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
 }
 
 .langBtnActive {
-  background-color: var(--accent-color);
+  background: var(--accent-color);
   color: white;
-  border-color: var(--accent-color);
+}
+
+.intro {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 3rem;
+  color: var(--primary-color);
+  opacity: 0.9;
+}
+
+.alertBox {
+  background: rgba(52, 152, 219, 0.1);
+  border-left: 4px solid var(--accent-color);
+  padding: 1.5rem;
+  margin-bottom: 3rem;
+  border-radius: 0 12px 12px 0;
+  font-style: italic;
+}
+
+.content section {
+  margin-bottom: 2.5rem;
 }
 
 .content h2 {
   font-size: 1.5rem;
-  margin: 2.5rem 0 1rem;
-  padding-bottom: 0.5rem;
-  border-bottom: 1px solid rgba(0,0,0,0.05);
+  margin-bottom: 1rem;
+  color: var(--accent-color);
 }
 
-.content p, .content li {
-  font-size: 1.05rem;
+.content p {
   line-height: 1.7;
-  color: var(--foreground-rgb);
-  margin-bottom: 1.2rem;
-}
-
-.content ul {
-  margin-bottom: 1.5rem;
-  padding-left: 1.5rem;
-}
-
-.content strong {
   color: var(--primary-color);
-}
-
-.alertBox {
-  background-color: rgba(52, 152, 219, 0.05);
-  border-left: 4px solid var(--accent-color);
-  padding: 1.5rem;
-  margin-bottom: 2rem;
-  font-style: italic;
+  opacity: 0.8;
 }
 
 .footerNote {
   margin-top: 4rem;
   padding-top: 2rem;
-  border-top: 1px solid rgba(0,0,0,0.1);
-  font-size: 0.9rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
   color: var(--text-muted);
+  font-size: 0.9rem;
 }
 
-@media (prefers-color-scheme: dark) {
-  .content h2 {
-    border-bottom-color: rgba(255,255,255,0.05);
+@media (max-width: 768px) {
+  .legalContainer {
+    margin: 2rem 1rem;
+    padding: 1.5rem;
   }
-  .alertBox {
-    background-color: rgba(52, 152, 219, 0.1);
+  
+  .header {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .headerTitle h1 {
+    font-size: 1.8rem;
   }
 }

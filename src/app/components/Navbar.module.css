@@ -38,3 +38,24 @@
 .navLinks a:hover {
   color: var(--accent-color);
 }
+
+.navCta {
+  background: var(--primary-color);
+  color: var(--background-start-rgb) !important;
+  padding: 0.5rem 1.2rem;
+  border-radius: 8px;
+  font-weight: 700 !important;
+  transition: all 0.3s ease !important;
+}
+
+.navCta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+@media (prefers-color-scheme: dark) {
+  .navCta {
+    background: white;
+    color: black !important;
+  }
+}

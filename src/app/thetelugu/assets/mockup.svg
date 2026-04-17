@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 800" width="400" height="800">
+  <rect width="400" height="800" rx="50" fill="#1A1A1A" stroke="#333" stroke-width="12"/>
+  <rect x="15" y="15" width="370" height="770" rx="40" fill="#000000"/>
+  
+  <!-- Notch -->
+  <rect x="130" y="25" width="140" height="30" rx="15" fill="#1A1A1A"/>
+  
+  <!-- Content placeholders -->
+  <circle cx="200" cy="300" r="80" fill="#FF5722" opacity="0.9"/>
+  <rect x="50" y="450" width="300" height="30" rx="15" fill="#333"/>
+  <rect x="50" y="510" width="240" height="20" rx="10" fill="#222"/>
+  <rect x="50" y="550" width="200" height="20" rx="10" fill="#222"/>
+  
+  <!-- Bottom bar -->
+  <rect x="130" y="760" width="140" height="5" rx="2.5" fill="#333"/>
+</svg>

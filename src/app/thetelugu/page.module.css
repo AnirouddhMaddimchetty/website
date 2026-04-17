@@ -1,0 +1,236 @@
+.landingWrapper {
+  background: #000;
+  color: #fff;
+  min-height: 100vh;
+  font-family: 'Inter', -apple-system, sans-serif;
+  overflow-x: hidden;
+}
+
+.hero {
+  padding: 120px 0 80px 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  top: -20%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 60%;
+  background: radial-gradient(circle, rgba(52, 152, 219, 0.1) 0%, transparent 70%);
+  filter: blur(80px);
+  z-index: 1;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2;
+  animation: fadeIn 1s ease-out;
+}
+
+.logoContainer {
+  margin-bottom: 3rem;
+}
+
+.logo {
+  width: 120px;
+  height: auto;
+}
+
+.title {
+  font-size: clamp(2.5rem, 10vw, 5.5rem);
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -4px;
+  margin-bottom: 2rem;
+}
+
+.gradient {
+  background: linear-gradient(135deg, #3498db, #8e44ad, #f1c40f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.subtitle {
+  font-size: 1.4rem;
+  max-width: 700px;
+  margin: 0 auto 4rem auto;
+  color: #a0a0a0;
+  line-height: 1.5;
+}
+
+.ctaGroup {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.appStoreBtn, .playStoreBtn {
+  padding: 1.2rem 2.5rem;
+  border-radius: 100px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 1.1rem;
+}
+
+.appStoreBtn {
+  background: #fff;
+  color: #000;
+}
+
+.playStoreBtn {
+  background: transparent;
+  color: #fff;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.appStoreBtn:hover, .playStoreBtn:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 10px 40px rgba(255, 255, 255, 0.1);
+}
+
+.features {
+  padding: 100px 0;
+  background: #0a0a0a;
+}
+
+.featureGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 3rem;
+}
+
+.featureCard {
+  background: #111;
+  padding: 3rem;
+  border-radius: 32px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+}
+
+.featureCard:hover {
+  border-color: rgba(52, 152, 219, 0.3);
+  background: #151515;
+}
+
+.icon {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.featureCard h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.featureCard p {
+  color: #808080;
+  line-height: 1.6;
+}
+
+.showcase {
+  padding: 100px 0;
+  background: #000;
+}
+
+.showcaseContent {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.showcaseText {
+  flex: 1;
+}
+
+.showcaseText h2 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 2rem;
+  line-height: 1.1;
+}
+
+.showcaseText p {
+  font-size: 1.2rem;
+  color: #a0a0a0;
+  line-height: 1.7;
+}
+
+.showcaseImage {
+  flex: 1;
+  text-align: center;
+}
+
+.mockup {
+  max-width: 100%;
+  height: auto;
+  border-radius: 40px;
+  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.5);
+  border: 10px solid #111;
+}
+
+.footer {
+  padding: 100px 0 50px 0;
+  background: #0a0a0a;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footerContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 4rem;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+
+.footerBrand h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.footerBrand p {
+  color: #666;
+}
+
+.footerLinks {
+  display: flex;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.footerLinks a {
+  text-decoration: none;
+  color: #a0a0a0;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.footerLinks a:hover {
+  color: #fff;
+}
+
+.copyright {
+  color: #444;
+  font-size: 0.9rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding-top: 2rem;
+  text-align: center;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+  .hero { padding: 80px 0 40px 0; }
+  .showcaseContent { flex-direction: column; text-align: center; }
+  .footerLinks { gap: 1.5rem; flex-direction: column; }
+}

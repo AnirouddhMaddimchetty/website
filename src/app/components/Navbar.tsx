@@ -9,8 +9,8 @@ export default function Navbar() {
           Anirouddh M.
         </Link>
         <ul className={styles.navLinks}>
-          <li><Link href="/blog">Blog</Link></li>
           <li><Link href="/projets">Projets</Link></li>
+          <li><Link href="/thetelugu" className={styles.navCta}>The Telugu</Link></li>
         </ul>
       </div>
     </nav>
