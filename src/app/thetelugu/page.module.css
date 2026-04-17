@@ -1,240 +1,213 @@
 .landingWrapper {
-  background: #000;
-  color: #fff;
+  background: var(--background);
+  color: var(--foreground);
   min-height: 100vh;
-  font-family: 'Inter', -apple-system, sans-serif;
-  overflow-x: hidden;
+  padding-top: 64px;
 }
 
 .hero {
-  padding: 120px 0 80px 0;
+  padding: 100px 0 60px 0;
   text-align: center;
   position: relative;
-  overflow: hidden;
 }
 
 .parallaxBg {
   position: absolute;
-  top: -20%;
-  left: 50%;
-  transform: translateX(-50%);
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 140%;
-  background: radial-gradient(circle at center, rgba(52, 152, 219, 0.15) 0%, transparent 70%);
-  filter: blur(80px);
+  height: 100%;
+  background: radial-gradient(circle at 50% 30%, rgba(59, 130, 246, 0.08) 0%, transparent 60%);
   z-index: 1;
   pointer-events: none;
-  will-change: transform;
 }
 
 .heroContent {
   position: relative;
   z-index: 2;
-  animation: fadeIn 1s ease-out;
 }
 
 .logoContainer {
-  margin-bottom: 3rem;
+  margin-bottom: 2.5rem;
 }
 
 .logo {
-  width: 120px;
+  width: 80px;
   height: auto;
+  border-radius: 18px;
 }
 
 .title {
-  font-size: clamp(2.5rem, 10vw, 5.5rem);
-  font-weight: 900;
-  line-height: 1;
-  letter-spacing: -4px;
-  margin-bottom: 2rem;
-}
-
-.gradient {
-  background: linear-gradient(135deg, #3498db, #8e44ad, #f1c40f);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  font-size: clamp(2.5rem, 8vw, 4.5rem);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+  margin-bottom: 1.5rem;
 }
 
 .subtitle {
-  font-size: 1.4rem;
-  max-width: 700px;
-  margin: 0 auto 4rem auto;
-  color: #a0a0a0;
+  font-size: 1.25rem;
+  max-width: 600px;
+  margin: 0 auto 3.5rem auto;
+  color: var(--secondary);
   line-height: 1.5;
+  font-weight: 400;
 }
 
 .ctaGroup {
   display: flex;
-  gap: 1.5rem;
+  gap: 1rem;
   justify-content: center;
   flex-wrap: wrap;
 }
 
-.appStoreBtn, .playStoreBtn {
-  padding: 1.2rem 2.5rem;
-  border-radius: 100px;
-  font-weight: 700;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  font-size: 1.1rem;
-}
-
 .appStoreBtn {
-  background: #fff;
-  color: #000;
+  padding: 0.8rem 1.8rem;
+  background: var(--foreground);
+  color: var(--background);
+  border-radius: 100px;
+  font-weight: 600;
+  font-size: 0.95rem;
 }
 
 .playStoreBtn {
-  background: transparent;
-  color: #fff;
-  border: 2px solid rgba(255, 255, 255, 0.2);
-}
-
-.appStoreBtn:hover, .playStoreBtn:hover {
-  transform: translateY(-5px) scale(1.05);
-  box-shadow: 0 10px 40px rgba(255, 255, 255, 0.1);
+  padding: 0.8rem 1.8rem;
+  background: var(--glass);
+  color: var(--foreground);
+  border: 1px solid var(--card-border);
+  border-radius: 100px;
+  font-weight: 600;
+  font-size: 0.95rem;
 }
 
 .features {
-  padding: 100px 0;
-  background: #0a0a0a;
+  padding: 80px 0;
 }
 
 .featureGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 3rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
 }
 
 .featureCard {
-  background: #111;
-  padding: 3rem;
-  border-radius: 32px;
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  transition: all 0.3s ease;
+  background: var(--card);
+  padding: 2.5rem;
+  border-radius: 24px;
+  border: 1px solid var(--card-border);
+  transition: border-color 0.3s ease;
 }
 
 .featureCard:hover {
-  border-color: rgba(52, 152, 219, 0.3);
-  background: #151515;
+  border-color: rgba(255, 255, 255, 0.2);
 }
 
 .icon {
-  font-size: 2.5rem;
+  font-size: 2rem;
   margin-bottom: 1.5rem;
-  will-change: transform;
-  display: inline-block;
+  display: block;
 }
 
 .featureCard h3 {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
 }
 
 .featureCard p {
-  color: #808080;
+  color: var(--secondary);
   line-height: 1.6;
+  font-size: 0.95rem;
 }
 
 .showcase {
-  padding: 100px 0;
-  background: #000;
+  padding: 80px 0;
 }
 
 .showcaseContent {
   display: flex;
   align-items: center;
-  gap: 60px;
-}
-
-.showcaseText {
-  flex: 1;
+  gap: 4rem;
+  background: var(--card);
+  padding: 4rem;
+  border-radius: 32px;
+  border: 1px solid var(--card-border);
 }
 
 .showcaseText h2 {
-  font-size: 3rem;
-  font-weight: 800;
-  margin-bottom: 2rem;
-  line-height: 1.1;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.03em;
 }
 
 .showcaseText p {
-  font-size: 1.2rem;
-  color: #a0a0a0;
-  line-height: 1.7;
+  font-size: 1.1rem;
+  color: var(--secondary);
+  line-height: 1.6;
 }
 
 .showcaseImage {
   flex: 1;
-  text-align: center;
+  display: flex;
+  justify-content: center;
 }
 
 .mockup {
-  max-width: 100%;
+  width: 280px;
   height: auto;
   border-radius: 40px;
-  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.5);
-  border: 10px solid #111;
-  will-change: transform;
 }
 
 .footer {
-  padding: 100px 0 50px 0;
-  background: #0a0a0a;
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 80px 0 40px 0;
+  border-top: 1px solid var(--card-border);
 }
 
 .footerContent {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
   margin-bottom: 4rem;
-  flex-wrap: wrap;
-  gap: 3rem;
 }
 
 .footerBrand h3 {
-  font-size: 1.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
   margin-bottom: 0.5rem;
 }
 
 .footerBrand p {
-  color: #666;
+  color: var(--muted);
+  font-size: 0.9rem;
 }
 
 .footerLinks {
   display: flex;
-  gap: 3rem;
-  flex-wrap: wrap;
+  gap: 2.5rem;
 }
 
 .footerLinks a {
-  text-decoration: none;
-  color: #a0a0a0;
-  font-weight: 500;
-  transition: color 0.3s ease;
-}
-
-.footerLinks a:hover {
-  color: #fff;
+  color: var(--secondary);
+  font-size: 0.9rem;
 }
 
 .copyright {
-  color: #444;
-  font-size: 0.9rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
-  padding-top: 2rem;
+  color: var(--muted);
+  font-size: 0.8rem;
   text-align: center;
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+@media (max-width: 900px) {
+  .showcaseContent {
+    flex-direction: column;
+    padding: 2.5rem;
+    text-align: center;
+  }
 }
 
-@media (max-width: 768px) {
-  .hero { padding: 80px 0 40px 0; }
-  .showcaseContent { flex-direction: column; text-align: center; }
-  .footerLinks { gap: 1.5rem; flex-direction: column; }
+@media (max-width: 600px) {
+  .footerContent {
+    flex-direction: column;
+    gap: 2rem;
+  }
 }

@@ -6,26 +6,23 @@ export default function Home() {
     <div className={styles.heroWrapper}>
       <div className="container">
         <section className={styles.hero}>
-          <div className={styles.badge}>Disponible maintenant</div>
           <h1 className={styles.title}>
-            Concevoir l'avenir, <br />
-            <span className={styles.highlight}>une ligne à la fois.</span>
+            Concevoir des <br /> expériences.
           </h1>
           <p className={styles.subtitle}>
-            Bonjour, je suis <strong>Anirouddh</strong>. Développeur créatif et fondateur de <em>The Telugu</em>. 
-            Je transforme des idées complexes en expériences numériques élégantes.
+            Bonjour, je suis <strong>Anirouddh</strong>. Fondateur de <em>The Telugu</em>. 
+            Je développe des produits numériques élégants et performants.
           </p>
           <div className={styles.actions}>
             <Link href="/thetelugu" className={styles.btnPrimary}>
-              Découvrir The Telugu
+              The Telugu
             </Link>
             <Link href="/projets" className={styles.btnSecondary}>
-              Mes Projets
+              Voir mes projets
             </Link>
           </div>
         </section>
       </div>
-      <div className={styles.backgroundGlow}></div>
     </div>
   );
 }

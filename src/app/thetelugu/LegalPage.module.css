@@ -1,114 +1,98 @@
 .legalContainer {
-  max-width: 800px;
-  margin: 4rem auto;
-  padding: 2rem;
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
-  border-radius: 24px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  color: var(--primary-color);
+  max-width: 700px;
+  margin: 120px auto;
+  padding: 0 2rem;
+  color: var(--foreground);
 }
 
 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin-bottom: 3rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  padding-bottom: 2rem;
+  margin-bottom: 5rem;
+  border-bottom: 1px solid var(--card-border);
+  padding-bottom: 3rem;
 }
 
 .headerTitle h1 {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
-  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  margin-bottom: 1rem;
 }
 
 .lastUpdated {
-  color: var(--text-muted);
+  color: var(--muted);
   font-size: 0.9rem;
 }
 
 .langSwitcher {
   display: flex;
   gap: 0.5rem;
-  background: rgba(0, 0, 0, 0.2);
-  padding: 4px;
-  border-radius: 12px;
+  margin-top: 2rem;
 }
 
 .langBtn {
-  padding: 8px 16px;
-  border-radius: 8px;
-  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  border: 1px solid var(--card-border);
   background: transparent;
-  color: var(--text-muted);
+  color: var(--secondary);
   cursor: pointer;
-  font-weight: 600;
-  transition: all 0.3s ease;
+  font-weight: 500;
+  font-size: 0.8rem;
+  transition: all 0.2s ease;
 }
 
 .langBtnActive {
-  background: var(--accent-color);
-  color: white;
+  background: var(--foreground);
+  color: var(--background);
+  border-color: var(--foreground);
 }
 
 .intro {
-  font-size: 1.2rem;
-  line-height: 1.6;
-  margin-bottom: 3rem;
-  color: var(--primary-color);
-  opacity: 0.9;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  margin-bottom: 4rem;
+  color: var(--secondary);
 }
 
 .alertBox {
-  background: rgba(52, 152, 219, 0.1);
-  border-left: 4px solid var(--accent-color);
+  background: var(--glass);
+  border: 1px solid var(--card-border);
   padding: 1.5rem;
-  margin-bottom: 3rem;
-  border-radius: 0 12px 12px 0;
-  font-style: italic;
+  margin-bottom: 4rem;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  color: var(--secondary);
+  line-height: 1.6;
 }
 
 .content section {
-  margin-bottom: 2.5rem;
+  margin-bottom: 3.5rem;
 }
 
 .content h2 {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
+  font-weight: 600;
   margin-bottom: 1rem;
-  color: var(--accent-color);
+  color: var(--foreground);
 }
 
 .content p {
-  line-height: 1.7;
-  color: var(--primary-color);
-  opacity: 0.8;
+  line-height: 1.6;
+  color: var(--secondary);
+  font-size: 1rem;
 }
 
 .footerNote {
-  margin-top: 4rem;
-  padding-top: 2rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 6rem;
+  padding-top: 3rem;
+  border-top: 1px solid var(--card-border);
   text-align: center;
-  color: var(--text-muted);
-  font-size: 0.9rem;
+  color: var(--muted);
+  font-size: 0.85rem;
 }
 
 @media (max-width: 768px) {
-  .legalContainer {
-    margin: 2rem 1rem;
-    padding: 1.5rem;
-  }
-  
-  .header {
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-  
   .headerTitle h1 {
-    font-size: 1.8rem;
+    font-size: 2.2rem;
   }
 }
