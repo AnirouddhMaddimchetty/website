@@ -29,19 +29,16 @@ export default function TheTeluguLanding() {
             <div className={styles.logoContainer}>
               <img src="/thetelugu/assets/logo.png" alt="The Telugu Logo" className={styles.logo} />
             </div>
-            <h1 className={styles.title}>
-              L'essence du Telugu <br /> 
-              <span className={styles.gradient}>dans votre poche.</span>
-            </h1>
+            <h1 className={styles.title}>The Telugu <br /> <span className={styles.gradient}>Learn & Play</span></h1>
             <p className={styles.subtitle}>
-              Une application moderne pour apprendre, se connecter et célébrer la richesse de la culture Telugu. 
-              Conçue pour la nouvelle génération.
+              L'essence de la culture Telugu dans votre poche. 
+              Apprenez, jouez et célébrez votre héritage avec une application conçue pour la nouvelle génération.
             </p>
             <div className={styles.ctaGroup}>
-              <Link href="#" className={styles.appStoreBtn}>
+              <Link href="https://apps.apple.com/fr/app/the-telugu-learn-play/id6762086815" className={styles.appStoreBtn} target="_blank" rel="noopener noreferrer">
                 Télécharger sur l'App Store
               </Link>
-              <Link href="#" className={styles.playStoreBtn}>
+              <Link href="https://play.google.com/store/apps/details?id=com.anirouddh.TheTelugu" className={styles.playStoreBtn} target="_blank" rel="noopener noreferrer">
                 Disponible sur Google Play
               </Link>
             </div>

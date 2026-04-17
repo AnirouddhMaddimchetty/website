@@ -4,8 +4,8 @@ import "./globals.css";
 import Navbar from "./components/Navbar";
 
 export const metadata: Metadata = {
-  title: "Anirouddh Maddimchetty | Blog & Portfolio",
-  description: "Bienvenue sur mon site personnel, développeur et créateur de The Telugu.",
+  title: "Anirouddh M. | The Telugu: Learn & Play",
+  description: "Développeur passionné et créateur de The Telugu: Learn & Play. Découvrez mes projets et l'application de référence pour la culture Telugu.",
 };
 
 export default function RootLayout({
