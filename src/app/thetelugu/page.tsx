@@ -10,7 +10,7 @@ export default function TheTeluguLanding() {
         <div className="container">
           <div className={styles.heroContent}>
             <div className={styles.logoContainer}>
-              <img src="/thetelugu/assets/logo.svg" alt="The Telugu Logo" className={styles.logo} />
+              <img src="/thetelugu/assets/logo.png" alt="The Telugu Logo" className={styles.logo} />
             </div>
             <h1 className={styles.title}>L'essence du Telugu <br /> <span className={styles.gradient}>dans votre poche.</span></h1>
             <p className={styles.subtitle}>
