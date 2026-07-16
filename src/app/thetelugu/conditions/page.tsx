@@ -4,7 +4,22 @@ import { useState } from 'react';
 import styles from '../LegalPage.module.css';
 import Link from 'next/link';
 
-const CONTENT = {
+interface LegalSection {
+  title: string;
+  content: string;
+  list?: string[];
+}
+
+interface PageContent {
+  title: string;
+  lastUpdated: string;
+  warning: string;
+  sections: LegalSection[];
+  footer: string;
+  policyLink: string;
+}
+
+const CONTENT: Record<'fr' | 'en', PageContent> = {
   fr: {
     title: "Conditions Générales d'Utilisation",
     lastUpdated: "Dernière mise à jour : 16 Juillet 2026",
@@ -12,31 +27,63 @@ const CONTENT = {
     sections: [
       {
         title: "1. Présentation du Service",
-        content: "The Telugu est une application mobile d'apprentissage interactif de la langue et de la culture Telugu. L'application propose des leçons théoriques, des exercices pratiques de tracé de caractères, et des jeux éducatifs."
+        content: "The Telugu est une application mobile dédiée à la diffusion et à l'apprentissage de la langue et de la culture Telugu :",
+        list: [
+          "<strong>Leçons de langue</strong> : Apprentissage structuré des alphabets, mots, grammaire et prononciation.",
+          "<strong>Exercices pratiques</strong> : Entraînement interactif au tracé des caractères telugu (aksharas).",
+          "<strong>Mini-jeux éducatifs</strong> : Jeux comme Akshara Alchemist, Bubble Temple et Vegam Akshara pour ancrer le vocabulaire."
+        ]
       },
       {
         title: "2. Compte Utilisateur et Authentification",
-        content: "Vous pouvez utiliser l'application en mode invité ou en créant un compte authentifié (Email, Google, Apple). Pour garantir un niveau de sécurité maximal, la création de comptes par mot de passe traditionnel est interdite pour les adresses se terminant par des domaines sociaux majeurs (tels que gmail.com ou icloud.com), imposant à la place l'utilisation de la connexion OAuth native et sécurisée correspondante. Les comptes invités inactifs depuis plus de 120 jours sont automatiquement purgés de nos serveurs. Vous êtes responsable du maintien de la confidentialité de vos identifiants."
+        content: "Vous pouvez explorer l'application librement en tant qu'invité ou vous connecter pour enregistrer votre progression :",
+        list: [
+          "<strong>Sécurité renforcée</strong> : La création de comptes avec mot de passe est désactivée pour les e-mails sous domaines sociaux (Gmail, iCloud) afin de privilégier la connexion directe et sécurisée (OAuth).",
+          "<strong>Responsabilité</strong> : Vous êtes responsable de la confidentialité de vos identifiants et des actions effectuées sous votre compte.",
+          "<strong>Purge des comptes inactifs</strong> : Les comptes invités inactifs pendant plus de 120 jours sont supprimés de nos serveurs."
+        ]
       },
       {
-        title: "3. Règles de Conduite et Modération des Pseudonymes",
-        content: "Afin de maintenir un environnement éducatif sain, le choix de votre pseudonyme (username) est soumis à des règles strictes. Il est strictement interdit d'utiliser des termes offensants, haineux, à connotation sexuelle ou inappropriés (en français, anglais et telugu). Un système de modération automatique basé sur l'intelligence artificielle (Google Gemini API) évalue la conformité des pseudonymes lors de leur création ou modification. Tout compte violant de manière répétée ou flagrante ces règles pourra être suspendu ou supprimé sans préavis."
+        title: "3. Règles de Conduite et Modération par IA",
+        content: "Pour assurer un cadre bienveillant et axé sur l'apprentissage, votre pseudonyme public doit respecter certaines règles :",
+        list: [
+          "<strong>Modération automatisée</strong> : Les pseudonymes sont évalués à la création et à la modification par l'intelligence artificielle (Google Gemini API).",
+          "<strong>Contenus prohibés</strong> : Tout pseudo à caractère injurieux, haineux, sexuel ou inapproprié (en français, anglais ou telugu) sera bloqué.",
+          "<strong>Sanctions</strong> : En cas de contournement délibéré ou de violation répétée, nous nous réservons le droit de suspendre ou supprimer votre compte sans préavis."
+        ]
       },
       {
-        title: "4. Système de Progression et Monnaie Virtuelle (Om)",
-        content: "L'application utilise une monnaie virtuelle appelée « Om » pour matérialiser votre assiduité et vos succès. Ces points sont stockés soit localement (invités) soit sur nos serveurs Firestore (utilisateurs connectés). Ils n'ont aucune valeur monétaire réelle, ne sont pas transférables, ne sont pas achetables avec de l'argent réel et ne peuvent en aucun cas être convertis en devises réelles. La suppression d'un compte entraîne la perte immédiate et définitive de tous les points Om cumulés."
+        title: "4. Système de Progression (Om)",
+        content: "L'application utilise des points d'expérience appelés « Om » pour encourager et mesurer vos efforts :",
+        list: [
+          "Les points Om n'ont <strong>aucune valeur financière réelle</strong>, ne peuvent pas être achetés avec de l'argent et ne sont pas transférables.",
+          "Ces points servent uniquement à l'affichage de votre progression dans l'application et sur le classement général public.",
+          "La suppression d'un compte entraîne la suppression immédiate et définitive de tous vos points Om accumulés."
+        ]
       },
       {
         title: "5. Publicités et Suivi publicitaire",
-        content: "The Telugu intègre Google AdMob pour afficher des publicités (bannières, vidéos récompensées) qui permettent de maintenir la gratuité de l'application. Pour les utilisateurs sur iOS, le suivi publicitaire personnalisé requiert un consentement via la boîte de dialogue système d'App Tracking Transparency (ATT)."
+        content: "L'application intègre des espaces publicitaires via la régie Google AdMob afin de rester gratuite :",
+        list: [
+          "En utilisant l'application, vous acceptez l'affichage de bannières publicitaires et de vidéos récompensées.",
+          "<strong>Consentement iOS (ATT)</strong> : Sur les appareils Apple, vous pouvez accepter ou refuser le ciblage publicitaire personnalisé via la boîte système d'App Tracking Transparency."
+        ]
       },
       {
         title: "6. Propriété Intellectuelle",
-        content: "Tous les contenus présents dans l'application (textes de leçons, voix et enregistrements audio, illustrations, animations, architectures de cours et de jeux) sont la propriété exclusive de « The Telugu ». Toute reproduction, distribution ou extraction commerciale sans accord écrit préalable de notre part est strictement interdite."
+        content: "Tous les éléments constitutifs de l'application sont protégés par le droit d'auteur :",
+        list: [
+          "Les textes, enregistrements audio, visuels, mini-jeux et architectures de cours restent la propriété exclusive de « The Telugu ».",
+          "Toute reproduction, copie, modification ou exploitation commerciale sans notre accord préalable écrit est formellement interdite."
+        ]
       },
       {
         title: "7. Limitation de Responsabilité",
-        content: "L'application est fournie « en l'état » et « selon sa disponibilité ». Nous ne garantissons pas l'absence d'erreurs ou l'infaillibilité du service de synchronisation en ligne. Nous déclinons toute responsabilité en cas de perte accidentelle ou technique de progression d'apprentissage locale ou stockée dans le cloud."
+        content: "Nous nous efforçons de fournir un service de haute qualité, mais l'application est proposée « en l'état » :",
+        list: [
+          "Nous ne garantissons pas que l'application soit totalement exempte de bugs ou d'interruptions techniques.",
+          "Nous ne pourrons être tenus responsables de pertes de progression de leçons (locales ou cloud) survenues suite à des défaillances techniques."
+        ]
       }
     ],
     footer: "Pour toute question relative aux CGU : anirouddh@gmail.com",
@@ -49,31 +96,63 @@ const CONTENT = {
     sections: [
       {
         title: "1. Service Overview",
-        content: "The Telugu is an interactive mobile application dedicated to learning the Telugu language and culture. The app features lessons, character tracing, and educational mini-games."
+        content: "The Telugu is a mobile application dedicated to sharing and learning the Telugu language and culture:",
+        list: [
+          "<strong>Language Lessons</strong>: Structured learning of alphabets, words, grammar, and pronunciation.",
+          "<strong>Practical Tracing Exercises</strong>: Interactive handwriting practice for Telugu characters (aksharas).",
+          "<strong>Educational Mini-Games</strong>: Games such as Akshara Alchemist, Bubble Temple, and Vegam Akshara to reinforce vocabulary."
+        ]
       },
       {
         title: "2. User Accounts and Authentication",
-        content: "You can use the app as a guest or create an authenticated account (Email, Google, Apple). To ensure maximum security, traditional password account creation is blocked for email addresses on major social domains (like gmail.com and icloud.com), requiring instead the use of the corresponding native, secure OAuth login. Guest accounts that are inactive for more than 120 days are automatically purged from our authentication systems. You are solely responsible for keeping your login credentials secure."
+        content: "You can explore the app freely as a guest or sign in to save your progression:",
+        list: [
+          "<strong>Enhanced Security</strong>: Traditional password signups are disabled for email addresses on social domains (Gmail, iCloud) in favor of secure, direct OAuth connections.",
+          "<strong>Responsibility</strong>: You are solely responsible for keeping your login credentials secure and for any activity conducted through your account.",
+          "<strong>Account Cleanup</strong>: Inactive guest accounts are automatically cleaned up after 120 days of inactivity."
+        ]
       },
       {
-        title: "3. Rules of Conduct & Username Moderation",
-        content: "To maintain a safe educational environment, your choice of username must follow community guidelines. The use of offensive, hateful, explicit, or inappropriate words in French, English, or Telugu is strictly prohibited. An automated moderation system powered by artificial intelligence (Google Gemini API) evaluates usernames during creation or updates. Accounts violating these guidelines may be suspended or deleted without prior notice."
+        title: "3. Rules of Conduct & AI Moderation",
+        content: "To ensure a welcoming, educational environment, your public nickname must follow strict rules:",
+        list: [
+          "<strong>Automated Verification</strong>: Proposed usernames are evaluated by AI (Google Gemini API) upon creation and updates.",
+          "<strong>Prohibited Terms</strong>: Any nickname containing abusive, hateful, explicit, or inappropriate words (in French, English, or Telugu) will be rejected.",
+          "<strong>Enforcement</strong>: We reserve the right to suspend or terminate accounts in cases of deliberate evasion or repeated violations."
+        ]
       },
       {
-        title: "4. Progression System & Virtual Currency (Om)",
-        content: "The app features a virtual currency called 'Om' to track your learning milestones. These points are stored locally (guest mode) or in the Firestore cloud database (registered accounts). Om points have no real monetary value, are non-transferable, cannot be purchased with real money, and can never be converted into real currency. Deleting an account will permanently erase all accumulated Om progress."
+        title: "4. Progression & Virtual Currency (Om)",
+        content: "The app uses 'Om' experience points to encourage and evaluate your learning milestones:",
+        list: [
+          "Om points have <strong>no real-world monetary value</strong>, cannot be purchased, and cannot be transferred.",
+          "These points are exclusively used to track progress in-app and rank users on the public global leaderboard.",
+          "Deleting your account will permanently wipe all earned Om points."
+        ]
       },
       {
         title: "5. Advertisements & Tracking",
-        content: "The Telugu uses Google AdMob to display advertisements (banners, rewarded videos) which allow us to keep the service free. For iOS users, personalized ad tracking is requested through the system App Tracking Transparency (ATT) dialogue."
+        content: "The application displays advertisements via Google AdMob to fund its free access:",
+        list: [
+          "By using the app, you consent to the display of banners and rewarded videos.",
+          "<strong>iOS Tracking (ATT)</strong>: On Apple devices, you can opt in or out of personalized tracking via the system App Tracking Transparency prompt."
+        ]
       },
       {
         title: "6. Intellectual Property",
-        content: "All content within the application (lesson texts, audio recordings, visual designs, course architecture, and game logic) is the exclusive property of 'The Telugu'. Any unauthorized reproduction, distribution, or commercial extraction is strictly prohibited."
+        content: "All elements within the application are protected by copyright laws:",
+        list: [
+          "Lesson texts, audio recordings, visual assets, game designs, and course layouts remain the exclusive property of 'The Telugu'.",
+          "Any reproduction, redistribution, or commercial use without our explicit prior written consent is strictly prohibited."
+        ]
       },
       {
         title: "7. Limitation of Liability",
-        content: "The application is provided on an 'as is' and 'as available' basis. We do not guarantee that the online synchronization service will be error-free or uninterrupted. We decline liability for any accidental or technical loss of learning progress stored locally or in the cloud."
+        content: "We aim to provide a high-quality service, but the application is provided on an 'as is' and 'as available' basis:",
+        list: [
+          "We do not warrant that the application will be completely free of bugs or technical interruptions.",
+          "We disclaim liability for any accidental or technical loss of learning progress stored locally or in the cloud."
+        ]
       }
     ],
     footer: "Questions about Terms? Contact us: anirouddh@gmail.com",
@@ -87,6 +166,10 @@ export default function TermsPage() {
 
   return (
     <div className={styles.legalContainer}>
+      <Link href="/thetelugu" className={styles.backLink}>
+        ← {lang === 'fr' ? "Retour à The Telugu" : "Back to The Telugu"}
+      </Link>
+
       <header className={styles.header}>
         <div className={styles.headerTitle}>
           <h1>{t.title}</h1>
@@ -114,14 +197,25 @@ export default function TermsPage() {
 
       <div className={styles.content}>
         {t.sections.map((section, index) => (
-          <section key={index}>
+          <section key={index} className={styles.sectionCard}>
             <h2>{section.title}</h2>
             <p>{section.content}</p>
+            {section.list && (
+              <ul className={styles.bulletList}>
+                {section.list.map((item, idx) => (
+                  <li 
+                    key={idx} 
+                    className={styles.bulletItem} 
+                    dangerouslySetInnerHTML={{ __html: item }}
+                  />
+                ))}
+              </ul>
+            )}
           </section>
         ))}
         
         <p style={{ marginTop: '2rem' }}>
-          <Link href="/thetelugu/confidentialite" style={{ color: 'var(--accent-color)', fontWeight: 'bold' }}>
+          <Link href="/thetelugu/confidentialite" style={{ color: 'var(--accent)', fontWeight: 'bold' }}>
             → {t.policyLink}
           </Link>
         </p>

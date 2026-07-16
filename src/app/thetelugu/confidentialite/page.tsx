@@ -4,7 +4,22 @@ import { useState } from 'react';
 import styles from '../LegalPage.module.css';
 import Link from 'next/link';
 
-const CONTENT = {
+interface LegalSection {
+  title: string;
+  content: string;
+  list?: string[];
+}
+
+interface PageContent {
+  title: string;
+  lastUpdated: string;
+  intro: string;
+  sections: LegalSection[];
+  footer: string;
+  termsLink: string;
+}
+
+const CONTENT: Record<'fr' | 'en', PageContent> = {
   fr: {
     title: "Politique de Confidentialité",
     lastUpdated: "Dernière mise à jour : 16 Juillet 2026",
@@ -12,23 +27,51 @@ const CONTENT = {
     sections: [
       {
         title: "1. Données Collectées",
-        content: "Nous collectons plusieurs types de données : vos identifiants de compte (adresse Email et UID unique si vous vous authentifiez via Google, Apple ou Email), votre pseudonyme de profil, votre progression d'apprentissage (scores, leçons complétées, succès, historique d'exercices et monnaie virtuelle « Om ») ainsi que vos réglages d'application (langue, mode sombre). Pour les comptes invités (anonymes), l'ensemble de ces données reste stocké localement sur votre appareil. Nous collectons également des identifiants publicitaires anonymes (AD_ID pour Android, IDFA pour iOS) et des données techniques anonymisées pour le suivi des performances et des plantages."
+        content: "Nous collectons différents types d'informations nécessaires au bon fonctionnement de l'application et à l'adaptation de votre apprentissage :",
+        list: [
+          "<strong>Identifiants de compte</strong> : Adresse e-mail et UID unique (si authentifié via Google, Apple ou e-mail).",
+          "<strong>Profil d'utilisateur</strong> : Votre pseudonyme choisi pour le classement général.",
+          "<strong>Progression pédagogique</strong> : Leçons complétées, scores, succès débloqués, historique d'exercices et cumul de la monnaie virtuelle <strong>« Om »</strong>.",
+          "<strong>Données des invités</strong> : Pour les utilisateurs non connectés, toutes les données de progression restent stockées localement sur votre appareil (via Hive) et ne sont pas envoyées sur nos serveurs.",
+          "<strong>Données techniques et publicitaires</strong> : Identifiants publicitaires anonymes (AD_ID sur Android, IDFA sur iOS) et rapports de plantage anonymes (Firebase Crashlytics)."
+        ]
       },
       {
         title: "2. Utilisation des Données",
-        content: "Vos données personnelles sont utilisées pour : synchroniser et sauvegarder votre progression sur tous vos appareils, gérer votre score dans le classement général public (Leaderboard), adapter dynamiquement votre parcours d'apprentissage grâce à notre algorithme d'adaptation local (profils d'apprentissage), modérer automatiquement et sécuriser les pseudonymes des joueurs, et envoyer des rappels d'étude via des notifications locales configurées sur l'appareil."
+        content: "Vos données personnelles sont traitées pour répondre aux besoins suivants :",
+        list: [
+          "Synchronisation cloud pour sauvegarder et retrouver votre progression sur plusieurs appareils.",
+          "Affichage de votre pseudonyme et score cumulé sur le classement mondial public.",
+          "<strong>Adaptation de l'apprentissage</strong> : Analyse de votre historique local pour adapter la difficulté et les conseils de notre compagnon.",
+          "<strong>Modération des pseudonymes</strong> : Utilisation d'un algorithme intelligent pour bannir les noms inappropriés et maintenir un espace d'apprentissage convivial.",
+          "Envoi de rappels d'étude quotidiens sous forme de notifications locales (sur l'appareil)."
+        ]
       },
       {
         title: "3. Services Tiers et Intelligence Artificielle",
-        content: "Nous faisons appel à des prestataires de confiance qui traitent certaines données dans le cadre de leurs services : 1) Google Firebase (Authentification sécurisée, base de données Cloud Firestore, rapports de crash Crashlytics, et outils d'analyse de performance). 2) Google Mobile Ads (AdMob) pour l'affichage de publicités finançant la gratuité du service. Sur iOS, le consentement de suivi est explicitement sollicité via le cadre d'App Tracking Transparency (ATT). 3) API Google Gemini (modèle gemini-3.1-flash-lite) utilisé par notre service de modération pour vérifier de manière automatisée la conformité de votre pseudonyme (seul le pseudo y est envoyé, à l'exclusion de tout email ou UID)."
+        content: "Nous intégrons des services tiers fiables pour enrichir l'expérience utilisateur et assurer la sécurité de l'application :",
+        list: [
+          "<strong>Google Firebase</strong> : Authentification sécurisée, base de données Cloud Firestore, et analyse de performance anonymisée.",
+          "<strong>Google Mobile Ads (AdMob)</strong> : Diffusion de publicités pour financer le service. Sur iOS, le suivi publicitaire personnalisé est soumis à votre accord via le protocole d'<strong>App Tracking Transparency</strong> (ATT).",
+          "<strong>Intelligence Artificielle Google Gemini</strong> : Intégration du modèle <em>gemini-3.1-flash-lite</em> pour vérifier la conformité des pseudonymes. Seul le pseudonyme proposé est transmis (aucune autre donnée utilisateur n'est partagée)."
+        ]
       },
       {
-        title: "4. Visibilité et Conservation des Données",
-        content: "Seuls votre pseudonyme et votre progression globale (score total, succès) sont publics dans le classement. Votre email et votre progression détaillée restent privés. Les comptes invités (anonymes) inactifs depuis plus de 120 jours sont automatiquement supprimés du serveur d'authentification pour des raisons d'hygiène et de sécurité des données."
+        title: "4. Visibilité et Conservation",
+        content: "Nous veillons à ce que vos informations personnelles restent strictement confidentielles :",
+        list: [
+          "Seuls votre pseudonyme et votre score total sont visibles par les autres utilisateurs dans le classement public.",
+          "Votre adresse e-mail et le détail de vos leçons restent entièrement confidentiels.",
+          "<strong>Purge des comptes inactifs</strong> : Les comptes invités (anonymes) inactifs depuis plus de 120 jours sont automatiquement et définitivement supprimés."
+        ]
       },
       {
-        title: "5. Vos Droits (Droit à l'oubli)",
-        content: "Vous disposez d'un contrôle total sur vos données. Vous pouvez supprimer définitivement et instantanément votre compte utilisateur ainsi que l'ensemble des données associées dans Cloud Firestore directement depuis les paramètres de l'application."
+        title: "5. Vos Droits",
+        content: "Vous conservez le contrôle total de vos données personnelles :",
+        list: [
+          "Vous pouvez modifier votre pseudonyme à tout moment dans l'application.",
+          "<strong>Droit à l'oubli</strong> : Vous pouvez supprimer instantanément et définitivement votre compte et toutes vos données de progression stockées dans Firestore en un clic depuis l'écran des réglages."
+        ]
       }
     ],
     footer: "Contact RGPD et Support : anirouddh@gmail.com",
@@ -41,23 +84,51 @@ const CONTENT = {
     sections: [
       {
         title: "1. Data Collection",
-        content: "We collect several types of data: account credentials (your email address and unique UID if authenticated via Google, Apple, or Email), your profile nickname, learning progression (scores, completed lessons, achievements, exercise history, and virtual currency 'Om'), and application settings (language, dark mode). For guest (anonymous) accounts, all progression and settings are stored locally on your device. We also collect anonymous advertising identifiers (AD_ID on Android, IDFA on iOS) and anonymized technical data to monitor performance and crash logs."
+        content: "We collect various types of information to ensure the proper functioning of the application and customize your learning experience:",
+        list: [
+          "<strong>Account Credentials</strong>: Email address and unique UID (if authenticated via Google, Apple, or Email).",
+          "<strong>User Profile</strong>: Your chosen username displayed on the leaderboard.",
+          "<strong>Learning Progress</strong>: Completed lessons, scores, unlocked achievements, exercise history, and virtual currency <strong>'Om'</strong>.",
+          "<strong>Guest Accounts</strong>: For unauthenticated users, all progress data is stored locally on the device (using Hive) and is not sent to our servers.",
+          "<strong>Technical & Advertising IDs</strong>: Anonymous advertising identifiers (AD_ID on Android, IDFA on iOS) and anonymous performance or crash reports (Firebase Crashlytics)."
+        ]
       },
       {
         title: "2. Data Usage",
-        content: "Your data is used to: synchronize and save your progress across multiple devices, manage your score on the public global Leaderboard, dynamically tailor your learning path using our local adaptive algorithm (learning profiles), automatically moderate and secure player usernames, and send local study reminders on your device."
+        content: "Your personal data is processed for the following purposes:",
+        list: [
+          "Cloud synchronization to save and retrieve your progress across multiple devices.",
+          "Displaying your username and overall progress on the public global leaderboard.",
+          "<strong>Adaptive Learning</strong>: Analyzing local exercise history to tailor study pacing and helpful prompts from your mascot.",
+          "<strong>Username Moderation</strong>: Evaluating chosen names using AI moderation to keep our learning community safe and welcoming.",
+          "Sending study reminders via local notifications directly on your device."
+        ]
       },
       {
-        title: "3. Third-Party Services and Artificial Intelligence",
-        content: "We use trusted third-party providers to handle specific parts of the experience: 1) Google Firebase (secure authentication, Cloud Firestore database, Crashlytics crash reports, and performance monitoring tools). 2) Google Mobile Ads (AdMob) to display advertisements which keep the service free. On iOS devices, tracking consent is explicitly requested via the App Tracking Transparency (ATT) framework. 3) Google Gemini API (gemini-3.1-flash-lite model) integrated into our safety moderation service to automatically verify username safety (only the nickname is processed; no email or UID is shared with the AI)."
+        title: "3. Third-Party Services and AI",
+        content: "We partner with trusted service providers to enhance security and deliver advertisements:",
+        list: [
+          "<strong>Google Firebase</strong>: Used for secure user accounts, Cloud Firestore database hosting, and anonymized performance tracking.",
+          "<strong>Google Mobile Ads (AdMob)</strong>: Displays ads to keep our learning resources free. iOS users must consent to ad tracking via the <strong>App Tracking Transparency</strong> (ATT) prompt.",
+          "<strong>Google Gemini AI Integration</strong>: Uses the <em>gemini-3.1-flash-lite</em> model to analyze and moderate usernames. Only the proposed username is sent to the API (no email or UID is shared)."
+        ]
       },
       {
         title: "4. Data Visibility and Retention",
-        content: "Only your username and overall progress (total score, achievements) are visible to the public on the leaderboard. Your email and detailed learning progression remain strictly private. Anonymous (guest) accounts inactive for more than 120 days are automatically deleted from the authentication server for data hygiene and security purposes."
+        content: "We implement strict measures to safeguard your personal details:",
+        list: [
+          "Only your username and overall score are displayed on the public global leaderboard.",
+          "Your email address and granular lesson progress remain strictly private.",
+          "<strong>Inactive Account Cleanup</strong>: Guest (anonymous) accounts that are inactive for more than 120 days are automatically deleted from our servers."
+        ]
       },
       {
-        title: "5. Your Rights (Right to be Forgotten)",
-        content: "You retain full control over your data. You can instantly and permanently delete your user account and all associated data stored in Cloud Firestore directly from the settings screen in the application."
+        title: "5. Your Rights",
+        content: "You maintain complete ownership of your personal information:",
+        list: [
+          "You can update your username at any time in the app.",
+          "<strong>Right to Erasure</strong>: You can instantly and permanently delete your account and all associated Firestore cloud progress with one click in the app settings."
+        ]
       }
     ],
     footer: "GDPR Contact and Support: anirouddh@gmail.com",
@@ -71,6 +142,10 @@ export default function PrivacyPage() {
 
   return (
     <div className={styles.legalContainer}>
+      <Link href="/thetelugu" className={styles.backLink}>
+        ← {lang === 'fr' ? "Retour à The Telugu" : "Back to The Telugu"}
+      </Link>
+
       <header className={styles.header}>
         <div className={styles.headerTitle}>
           <h1>{t.title}</h1>
@@ -96,14 +171,25 @@ export default function PrivacyPage() {
 
       <div className={styles.content}>
         {t.sections.map((section, index) => (
-          <section key={index}>
+          <section key={index} className={styles.sectionCard}>
             <h2>{section.title}</h2>
             <p>{section.content}</p>
+            {section.list && (
+              <ul className={styles.bulletList}>
+                {section.list.map((item, idx) => (
+                  <li 
+                    key={idx} 
+                    className={styles.bulletItem} 
+                    dangerouslySetInnerHTML={{ __html: item }}
+                  />
+                ))}
+              </ul>
+            )}
           </section>
         ))}
 
         <p style={{ marginTop: '2rem' }}>
-          <Link href="/thetelugu/conditions" style={{ color: 'var(--accent-color)', fontWeight: 'bold' }}>
+          <Link href="/thetelugu/conditions" style={{ color: 'var(--accent)', fontWeight: 'bold' }}>
             → {t.termsLink}
           </Link>
         </p>
