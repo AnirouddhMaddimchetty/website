@@ -1,0 +1,620 @@
+<!doctype html>
+<html
+  lang="fr"
+  data-lang="fr"
+  data-title-fr="The Telugu : Learn & Play — Anirouddh"
+  data-title-en="The Telugu: Learn & Play — Anirouddh"
+  data-desc-fr="Découvrez The Telugu : Learn & Play sur iOS et Android — cahier d'écriture, dictionnaire de 3 541 mots, parcours adaptatif local Svarna Marga et mini-jeux d'arcade."
+  data-desc-en="Discover The Telugu: Learn & Play on iOS and Android — interactive script notebook, 3,541-word dictionary, local Svarna Marga adaptive path and arcade games."
+>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <title>The Telugu : Learn &amp; Play — Anirouddh</title>
+    <meta
+      name="description"
+      content="Découvrez The Telugu : Learn &amp; Play sur iOS et Android — cahier d'écriture, dictionnaire de 3 541 mots, parcours adaptatif local Svarna Marga et mini-jeux d'arcade."
+    />
+    <link rel="canonical" href="https://anirouddh.com/thetelugu/" />
+    <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png" />
+    <script>
+      (() => {
+        const params = new URLSearchParams(location.search);
+        const qLang = params.get('lang');
+        const sLang = localStorage.getItem('site-lang');
+        const lang = qLang === 'en' || qLang === 'fr' ? qLang : sLang === 'en' || sLang === 'fr' ? sLang : 'fr';
+        if (qLang === 'en' || qLang === 'fr') localStorage.setItem('site-lang', qLang);
+        document.documentElement.lang = lang;
+        document.documentElement.dataset.lang = lang;
+        const theme = localStorage.getItem('color-scheme');
+        if (theme === 'light' || theme === 'dark') {
+          document.head.querySelector('meta[name="color-scheme"]')?.setAttribute('content', theme);
+        }
+      })();
+    </script>
+    <link rel="stylesheet" href="/styles/site.css" />
+    <script type="module" src="/scripts/site.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">
+      <span data-lang-only="fr">Aller au contenu principal</span>
+      <span data-lang-only="en">Skip to main content</span>
+    </a>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="/">
+          <span>anirouddh<span class="brand-dot">.</span></span>
+        </a>
+
+        <nav class="primary-nav" aria-label="Navigation principale" data-aria-fr="Navigation principale" data-aria-en="Primary navigation">
+          <ul class="nav-list">
+            <li>
+              <a class="nav-link" href="/">
+                <span data-lang-only="fr">Accueil</span>
+                <span data-lang-only="en">Home</span>
+              </a>
+            </li>
+            <li>
+              <a class="nav-link" href="/projets/">
+                <span data-lang-only="fr">Projets</span>
+                <span data-lang-only="en">Projects</span>
+              </a>
+            </li>
+            <li>
+              <a class="nav-link" href="/thetelugu/" aria-current="page">The Telugu</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="header-controls">
+          <div class="lang-switch lang-switch--desktop" role="group" aria-label="Langue du site" data-aria-fr="Langue du site" data-aria-en="Site language">
+            <button class="lang-btn" type="button" data-set-lang="fr" aria-pressed="true">FR</button>
+            <button class="lang-btn" type="button" data-set-lang="en" aria-pressed="false">EN</button>
+          </div>
+
+          <button class="icon-btn" type="button" data-theme-toggle aria-pressed="false" aria-label="Passer au thème sombre">
+            <svg class="theme-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+            </svg>
+            <svg class="theme-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="4" />
+              <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" />
+            </svg>
+          </button>
+
+          <button class="icon-btn menu-toggle" type="button" popovertarget="mobile-nav" aria-label="Ouvrir le menu" data-aria-fr="Ouvrir le menu" data-aria-en="Open menu">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+              <path d="M4 7h16M4 12h16M4 17h16" />
+            </svg>
+            <span>Menu</span>
+          </button>
+        </div>
+      </div>
+
+      <div id="mobile-nav" class="nav-popover" popover="auto">
+        <ul class="mobile-nav-list">
+          <li>
+            <a href="/">
+              <span data-lang-only="fr">Accueil</span>
+              <span data-lang-only="en">Home</span>
+            </a>
+          </li>
+          <li>
+            <a href="/projets/">
+              <span data-lang-only="fr">Projets</span>
+              <span data-lang-only="en">Projects</span>
+            </a>
+          </li>
+          <li>
+            <a href="/thetelugu/" aria-current="page">The Telugu</a>
+          </li>
+          <li>
+            <a href="/thetelugu/confidentialite/">
+              <span data-lang-only="fr">Confidentialité (The Telugu)</span>
+              <span data-lang-only="en">Privacy (The Telugu)</span>
+            </a>
+          </li>
+          <li>
+            <a href="/thetelugu/conditions/">
+              <span data-lang-only="fr">Conditions (The Telugu)</span>
+              <span data-lang-only="en">Terms (The Telugu)</span>
+            </a>
+          </li>
+        </ul>
+        <div class="popover-footer">
+          <span class="mono" style="font-size: 0.76rem; color: var(--ink-muted);">
+            <span data-lang-only="fr">Langue</span>
+            <span data-lang-only="en">Language</span>
+          </span>
+          <div class="lang-switch" role="group" aria-label="Langue du site" data-aria-fr="Langue du site" data-aria-en="Site language">
+            <button class="lang-btn" type="button" data-set-lang="fr" aria-pressed="true">FR</button>
+            <button class="lang-btn" type="button" data-set-lang="en" aria-pressed="false">EN</button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section class="hero section--flush-top">
+        <div class="container hero-split">
+          <div class="hero-copy">
+            <div class="app-lockup">
+              <picture>
+                <source type="image/avif" srcset="/thetelugu/assets/logo-128.avif" />
+                <source type="image/webp" srcset="/thetelugu/assets/logo-128.webp" />
+                <img
+                  class="app-icon"
+                  src="/thetelugu/assets/logo.png"
+                  width="68"
+                  height="68"
+                  alt="Icône de l'application The Telugu"
+                  data-alt-fr="Icône de l'application The Telugu"
+                  data-alt-en="The Telugu app icon"
+                />
+              </picture>
+              <div class="stack-xs">
+                <span class="badge badge--saffron" style="inline-size: fit-content;">
+                  v1.5 · <span class="telugu-glyph" lang="te">తెలుగు</span>
+                </span>
+                <span class="mono" style="font-size: 0.78rem; color: var(--ink-muted);">com.anirouddh.TheTelugu</span>
+              </div>
+            </div>
+
+            <h1>The Telugu : Learn &amp; Play</h1>
+
+            <p class="hero-lead">
+              <span data-lang-only="fr">
+                Un cahier vivant pour maîtriser la lecture, l'écriture manuscrite et le vocabulaire du télougou — mêlant répétition espacée locale, dictionnaire complet et jeux d'arcade sur iOS et Android.
+              </span>
+              <span data-lang-only="en">
+                A living notebook to master Telugu reading, handwriting and vocabulary — combining on-device spaced repetition, a full dictionary and arcade mini-games on iOS and Android.
+              </span>
+            </p>
+
+            <div class="actions-row">
+              <a class="btn btn-primary" href="https://apps.apple.com/fr/app/the-telugu-learn-play/id6762086815" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.96 6.35c.68-.83 1.14-1.98 1.01-3.13-.98.04-2.17.65-2.87 1.48-.63.72-1.18 1.89-1.03 3.01 1.1.08 2.21-.56 2.89-1.36" />
+                </svg>
+                <span>App Store</span>
+              </a>
+
+              <a class="btn btn-secondary" href="https://play.google.com/store/apps/details?id=com.anirouddh.TheTelugu" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M3.61 1.814L13.793 12 3.61 22.186a1.47 1.47 0 0 1-.41-1.04V2.855c0-.39.15-.76.41-1.041zm1.16-.585l10.61 5.995-2.66 2.66L4.77 1.23zm12.01 6.79l3.35 1.89c.91.51.91 1.67 0 2.18l-3.35 1.89-2.99-2.99 2.99-2.97zm-4.06 4.06l2.66 2.66-10.61 5.995 7.95-8.655z" />
+                </svg>
+                <span>Google Play</span>
+              </a>
+            </div>
+
+            <div class="actions-row" style="font-size: 0.92rem;">
+              <a href="/thetelugu/confidentialite/">
+                <span data-lang-only="fr">Politique de confidentialité</span>
+                <span data-lang-only="en">Privacy Policy</span>
+              </a>
+              <span aria-hidden="true">·</span>
+              <a href="/thetelugu/conditions/">
+                <span data-lang-only="fr">Conditions d'utilisation</span>
+                <span data-lang-only="en">Terms of Use</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="hero-visual">
+            <figure class="device-frame">
+              <picture>
+                <source type="image/avif" srcset="/assets/images/thetelugu/home-390.avif 390w, /assets/images/thetelugu/home-780.avif 780w" sizes="(min-width: 56rem) 19rem, 78vi" />
+                <source type="image/webp" srcset="/assets/images/thetelugu/home-390.webp 390w, /assets/images/thetelugu/home-780.webp 780w" sizes="(min-width: 56rem) 19rem, 78vi" />
+                <img
+                  src="/assets/images/thetelugu/home-390.png"
+                  srcset="/assets/images/thetelugu/home-390.png 390w, /assets/images/thetelugu/home-780.png 780w"
+                  sizes="(min-width: 56rem) 19rem, 78vi"
+                  width="390"
+                  height="844"
+                  fetchpriority="high"
+                  decoding="sync"
+                  alt="Écran d'accueil de The Telugu : Défis du jour, Temple des Bulles, Akshara et Sanctuaire des Feuilles"
+                  data-alt-fr="Écran d'accueil de The Telugu : Défis du jour, Temple des Bulles, Akshara et Sanctuaire des Feuilles"
+                  data-alt-en="The Telugu Home screen: Daily Quests, Bubble Temple, Akshara and Leaf Sanctuary"
+                />
+              </picture>
+            </figure>
+            <p class="device-caption">
+              <span data-lang-only="fr">Captures authentiques de l'application</span>
+              <span data-lang-only="en">Authentic in-app captures</span>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" data-reveal>
+        <div class="container">
+          <div class="section-head">
+            <span class="eyebrow">
+              <span data-lang-only="fr">Architecture pédagogique &amp; jeu</span>
+              <span data-lang-only="en">Learning &amp; game systems</span>
+            </span>
+            <h2>
+              <span data-lang-only="fr">Quatre piliers pensés pour durer.</span>
+              <span data-lang-only="en">Four core pillars built for steady mastery.</span>
+            </h2>
+          </div>
+
+          <div class="grid-2">
+            <article class="card">
+              <span class="card-index">01 · <span data-lang-only="fr">BIBLIOTHÈQUE &amp; CALLIGRAPHIE</span><span data-lang-only="en">LIBRARY &amp; HANDWRITING</span></span>
+              <h3>
+                <span data-lang-only="fr">Carnet Akṣarālu &amp; Padālu</span>
+                <span data-lang-only="en">Akṣarālu &amp; Padālu Notebooks</span>
+              </h3>
+              <p>
+                <span data-lang-only="fr">
+                  Voyelles, consonnes, combinaisons <em>Guṇintālu</em> et chapitres thématiques de mots. Chaque caractère dispose d'une zone de tracé manuscrit guidé trait par trait, d'exemples sonores et d'une synthèse vocale locale (<code>te-IN</code>).
+                </span>
+                <span data-lang-only="en">
+                  Vowels, consonants, <em>Guṇintālu</em> combinations and thematic vocabulary chapters. Every character comes with stroke-by-stroke guided handwriting practice, audio samples and local Telugu TTS (<code>te-IN</code>).
+                </span>
+              </p>
+            </article>
+
+            <article class="card">
+              <span class="card-index">02 · <span data-lang-only="fr">DICTIONNAIRE TRILINGUE</span><span data-lang-only="en">TRILINGUAL DICTIONARY</span></span>
+              <h3>Nighaṇṭuvu (3 541 <span data-lang-only="fr">mots</span><span data-lang-only="en">words</span>)</h3>
+              <p>
+                <span data-lang-only="fr">
+                  Recherche instantanée en écriture télougoue, en translittération latine, en français ou en anglais. Base SQLite embarquée et mise à jour différentiellement sans réinstaller l'application, avec favoris et écoute audio.
+                </span>
+                <span data-lang-only="en">
+                  Instant search across Telugu script, Latin transliteration, French and English. Built on an embedded SQLite lexicon with differential OTA updates, favorites and integrated audio playback.
+                </span>
+              </p>
+            </article>
+
+            <article class="card">
+              <span class="card-index">03 · <span data-lang-only="fr">PARCOURS ADAPTATIF LOCAL</span><span data-lang-only="en">LOCAL ADAPTIVE PATH</span></span>
+              <h3>
+                <span data-lang-only="fr">Svarna Marga &amp; Chinni</span>
+                <span data-lang-only="en">Svarna Marga &amp; Chinni</span>
+              </h3>
+              <p>
+                <span data-lang-only="fr">
+                  Un plan d'étude sur 7 jours généré <strong>directement sur votre appareil</strong> grâce à la répétition espacée SM-2 et au suivi local de vos erreurs. Les séances alternent entre 5 mini-jeux de révision et 5 défis ciblés — sans envoyer votre historique à une IA externe.
+                </span>
+                <span data-lang-only="en">
+                  A 7-day study roadmap computed <strong>directly on your device</strong> using SM-2 spaced repetition and local error metrics. Sessions weave between 5 revision mini-games and 5 targeted challenges — without sending study history to external AI.
+                </span>
+              </p>
+            </article>
+
+            <article class="card">
+              <span class="card-index">04 · <span data-lang-only="fr">ARCADE, DÉFIS &amp; ÉCONOMIE</span><span data-lang-only="en">ARCADE, CHALLENGES &amp; REWARDS</span></span>
+              <h3>
+                <span data-lang-only="fr">Temple, Sanctuaire &amp; Vegam Arena</span>
+                <span data-lang-only="en">Temple, Sanctuary &amp; Vegam Arena</span>
+              </h3>
+              <p>
+                <span data-lang-only="fr">
+                  Entraînement solo (<em>Temple des Bulles</em>, fusion de runes <em>Akshara</em>, <em>Sanctuaire des Feuilles</em> sur 200 niveaux) et classements (<em>Akshara Express</em>, <em>Padam Jalakam</em>, <em>Vegam Arena</em>). Progression via points <em>Om</em> et <em>Vajralu</em>, 100 % gratuits et sans achat en argent réel.
+                </span>
+                <span data-lang-only="en">
+                  Solo modes (<em>Bubble Temple</em>, <em>Akshara</em> rune fusion, 200-level <em>Leaf Sanctuary</em>) plus ranked modes (<em>Akshara Express</em>, <em>Padam Jalakam</em>, <em>Vegam Arena</em>). Progress via <em>Om</em> points and <em>Vajralu</em> gems with zero paid In-App Purchases.
+                </span>
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" data-reveal>
+        <div class="container">
+          <div class="section-head">
+            <span class="eyebrow">
+              <span data-lang-only="fr">Aperçu de l'interface</span>
+              <span data-lang-only="en">Interface preview</span>
+            </span>
+            <h2>
+              <span data-lang-only="fr">Six écrans capturés dans l'application.</span>
+              <span data-lang-only="en">Six screens captured inside the app.</span>
+            </h2>
+            <p class="prose">
+              <span data-lang-only="fr">Cliquez ou validez sur une capture pour l'inspecter en grand format.</span>
+              <span data-lang-only="en">Select any screenshot to inspect it in the full-size viewer.</span>
+            </p>
+          </div>
+
+          <div class="gallery-grid">
+            <button
+              type="button"
+              class="shot-card"
+              data-lightbox-trigger
+              data-shot-stem="home"
+              data-title-fr="Accueil &amp; Défis du jour"
+              data-title-en="Home &amp; Daily Quests"
+              data-caption-fr="Tableau de bord avec rang Vidyarthi, quêtes quotidiennes et accès rapide aux modes solo."
+              data-caption-en="Main hub featuring your Vidyarthi rank badge, daily quests and direct entry into solo games."
+              data-alt-fr="Écran d'accueil The Telugu avec quêtes du jour et modes solo"
+              data-alt-en="The Telugu home screen with daily quests and solo game cards"
+            >
+              <picture>
+                <source type="image/avif" srcset="/assets/images/thetelugu/home-390.avif" />
+                <source type="image/webp" srcset="/assets/images/thetelugu/home-390.webp" />
+                <img src="/assets/images/thetelugu/home-390.png" width="390" height="844" loading="lazy" alt="Écran d'accueil The Telugu" data-alt-fr="Écran d'accueil The Telugu" data-alt-en="The Telugu home screen" />
+              </picture>
+              <span class="shot-label">
+                <span data-lang-only="fr">01 · Accueil</span>
+                <span data-lang-only="en">01 · Home</span>
+              </span>
+              <span class="shot-caption">
+                <span data-lang-only="fr">Rangs Om, défis du jour et jeux solo</span>
+                <span data-lang-only="en">Om ranks, daily quests and solo games</span>
+              </span>
+            </button>
+
+            <button
+              type="button"
+              class="shot-card"
+              data-lightbox-trigger
+              data-shot-stem="library"
+              data-title-fr="Bibliothèque Akṣarālu &amp; Padālu"
+              data-title-en="Akṣarālu &amp; Padālu Library"
+              data-caption-fr="Rayonnages thématiques regroupant leçons d'écriture, syllabaires et lexiques."
+              data-caption-en="Curated bookshelves organizing handwriting notebooks, syllabaries and vocabulary units."
+              data-alt-fr="Bibliothèque de l'application The Telugu montrant Akṣarālu, Padālu et Nighaṇṭuvu"
+              data-alt-en="The Telugu bookshelf library showing Akṣarālu, Padālu and Nighaṇṭuvu"
+            >
+              <picture>
+                <source type="image/avif" srcset="/assets/images/thetelugu/library-390.avif" />
+                <source type="image/webp" srcset="/assets/images/thetelugu/library-390.webp" />
+                <img src="/assets/images/thetelugu/library-390.png" width="390" height="844" loading="lazy" alt="Bibliothèque The Telugu" data-alt-fr="Bibliothèque The Telugu" data-alt-en="The Telugu library bookshelves" />
+              </picture>
+              <span class="shot-label">
+                <span data-lang-only="fr">02 · Bibliothèque</span>
+                <span data-lang-only="en">02 · Library</span>
+              </span>
+              <span class="shot-caption">
+                <span data-lang-only="fr">Livres interactifs et chapitres classés</span>
+                <span data-lang-only="en">Interactive notebooks and graded chapters</span>
+              </span>
+            </button>
+
+            <button
+              type="button"
+              class="shot-card"
+              data-lightbox-trigger
+              data-shot-stem="lesson"
+              data-title-fr="Cahier &amp; Tracé guidé"
+              data-title-en="Notebook &amp; Guided Tracing"
+              data-caption-fr="Page de cahier avec écoute phonétique et ardoise de tracé tactile pour le caractère అ."
+              data-caption-en="Spiral notebook lesson featuring phonetic audio playback and finger-tracing slate for అ."
+              data-alt-fr="Leçon et zone de tracé tactile pour le caractère télougou అ"
+              data-alt-en="Spiral notebook lesson and tracing pad for Telugu character అ"
+            >
+              <picture>
+                <source type="image/avif" srcset="/assets/images/thetelugu/lesson-390.avif" />
+                <source type="image/webp" srcset="/assets/images/thetelugu/lesson-390.webp" />
+                <img src="/assets/images/thetelugu/lesson-390.png" width="390" height="844" loading="lazy" alt="Cahier et tracé guidé" data-alt-fr="Cahier et tracé guidé" data-alt-en="Guided calligraphy tracing" />
+              </picture>
+              <span class="shot-label">
+                <span data-lang-only="fr">03 · Tracé manuscrit</span>
+                <span data-lang-only="en">03 · Guided Tracing</span>
+              </span>
+              <span class="shot-caption">
+                <span data-lang-only="fr">Calligraphie trait par trait et audio</span>
+                <span data-lang-only="en">Stroke-order practice and pronunciation</span>
+              </span>
+            </button>
+
+            <button
+              type="button"
+              class="shot-card"
+              data-lightbox-trigger
+              data-shot-stem="dictionary"
+              data-title-fr="Dictionnaire Nighaṇṭuvu"
+              data-title-en="Nighaṇṭuvu Dictionary"
+              data-caption-fr="Index consultable de 3 541 mots avec recherche instantanée, favoris et audio télougou."
+              data-caption-en="Searchable 3,541-word index supporting Telugu script, Latin transliteration, French and English."
+              data-alt-fr="Dictionnaire Nighaṇṭuvu affichant 3 541 entrées télougou"
+              data-alt-en="Nighaṇṭuvu dictionary displaying 3,541 Telugu entries"
+            >
+              <picture>
+                <source type="image/avif" srcset="/assets/images/thetelugu/dictionary-390.avif" />
+                <source type="image/webp" srcset="/assets/images/thetelugu/dictionary-390.webp" />
+                <img src="/assets/images/thetelugu/dictionary-390.png" width="390" height="844" loading="lazy" alt="Dictionnaire 3 541 mots" data-alt-fr="Dictionnaire 3 541 mots" data-alt-en="3,541-word dictionary" />
+              </picture>
+              <span class="shot-label">
+                <span data-lang-only="fr">04 · Dictionnaire</span>
+                <span data-lang-only="en">04 · Dictionary</span>
+              </span>
+              <span class="shot-caption">
+                <span data-lang-only="fr">3 541 entrées hors ligne &amp; audio</span>
+                <span data-lang-only="en">3,541 offline entries with audio</span>
+              </span>
+            </button>
+
+            <button
+              type="button"
+              class="shot-card"
+              data-lightbox-trigger
+              data-shot-stem="journey"
+              data-title-fr="Parcours IA Svarna Marga"
+              data-title-en="Svarna Marga AI Journey"
+              data-caption-fr="Chemin étoilé adaptatif piloté localement par Chinni pour réviser au bon moment."
+              data-caption-en="Constellation study roadmap calibrated on-device with Chinni for timely reviews."
+              data-alt-fr="Parcours adaptatif Svarna Marga avec Chinni et les étapes quotidiennes"
+              data-alt-en="Svarna Marga adaptive constellation path with Chinni"
+            >
+              <picture>
+                <source type="image/avif" srcset="/assets/images/thetelugu/journey-390.avif" />
+                <source type="image/webp" srcset="/assets/images/thetelugu/journey-390.webp" />
+                <img src="/assets/images/thetelugu/journey-390.png" width="390" height="844" loading="lazy" alt="Parcours Svarna Marga" data-alt-fr="Parcours Svarna Marga" data-alt-en="Svarna Marga path" />
+              </picture>
+              <span class="shot-label">
+                <span data-lang-only="fr">05 · Svarna Marga</span>
+                <span data-lang-only="en">05 · Svarna Marga</span>
+              </span>
+              <span class="shot-caption">
+                <span data-lang-only="fr">Répétition espacée SM-2 sur appareil</span>
+                <span data-lang-only="en">On-device SM-2 spaced repetition</span>
+              </span>
+            </button>
+
+            <button
+              type="button"
+              class="shot-card"
+              data-lightbox-trigger
+              data-shot-stem="arcade"
+              data-title-fr="Arcade — Temple des Bulles"
+              data-title-en="Arcade — Bubble Temple"
+              data-caption-fr="Reconnaissance sonore et visuelle en temps réel dans les mini-jeux d'arcade."
+              data-caption-en="Real-time audio and visual character recognition inside the arcade mode."
+              data-alt-fr="Partie en direct du mini-jeu Temple des Bulles dans The Telugu"
+              data-alt-en="Live gameplay of Bubble Temple mini-game inside The Telugu"
+            >
+              <picture>
+                <source type="image/avif" srcset="/assets/images/thetelugu/arcade-390.avif" />
+                <source type="image/webp" srcset="/assets/images/thetelugu/arcade-390.webp" />
+                <img src="/assets/images/thetelugu/arcade-390.png" width="390" height="844" loading="lazy" alt="Temple des Bulles" data-alt-fr="Temple des Bulles" data-alt-en="Bubble Temple gameplay" />
+              </picture>
+              <span class="shot-label">
+                <span data-lang-only="fr">06 · Temple des Bulles</span>
+                <span data-lang-only="en">06 · Bubble Temple</span>
+              </span>
+              <span class="shot-caption">
+                <span data-lang-only="fr">Réflexes auditifs et reconnaissance</span>
+                <span data-lang-only="en">Audio reflexes and script recognition</span>
+              </span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" data-reveal>
+        <div class="container">
+          <div class="grid-2">
+            <div class="card card--bordered">
+              <span class="card-index">
+                <span data-lang-only="fr">TRANSPARENCE &amp; CONFORMITÉ</span>
+                <span data-lang-only="en">TRANSPARENCY &amp; COMPLIANCE</span>
+              </span>
+              <h2>
+                <span data-lang-only="fr">Documentation légale à jour (v1.5)</span>
+                <span data-lang-only="en">Up-to-date legal documentation (v1.5)</span>
+              </h2>
+              <p>
+                <span data-lang-only="fr">
+                  Les conditions d'utilisation et la politique de confidentialité détaillent précisément le fonctionnement hors ligne du parcours adaptatif, la modération des pseudonymes, l'usage des services Firebase, la gestion des publicités AdMob (UMP / ATT) et la suppression complète de compte.
+                </span>
+                <span data-lang-only="en">
+                  Both our Privacy Policy and Terms of Use accurately explain on-device adaptive learning, nickname moderation, Firebase services, AdMob advertising consent (UMP / ATT), virtual currency rules and immediate full account deletion.
+                </span>
+              </p>
+              <div class="actions-row">
+                <a class="btn btn-primary" href="/thetelugu/confidentialite/">
+                  <span data-lang-only="fr">Politique de confidentialité</span>
+                  <span data-lang-only="en">Privacy Policy</span>
+                </a>
+                <a class="btn btn-secondary" href="/thetelugu/conditions/">
+                  <span data-lang-only="fr">Conditions d'utilisation</span>
+                  <span data-lang-only="en">Terms of Use</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="card">
+              <span class="card-index">
+                <span data-lang-only="fr">SUPPORT LÉGAL DES STORES</span>
+                <span data-lang-only="en">APP STORES LEGAL CONTACT</span>
+              </span>
+              <h3>
+                <span data-lang-only="fr">Éditeur &amp; assistance</span>
+                <span data-lang-only="en">Publisher &amp; support</span>
+              </h3>
+              <p>
+                <span data-lang-only="fr">
+                  Pour toute question relative à vos données personnelles, à la suppression de compte ou au fonctionnement de l'application sur App Store et Google Play :
+                </span>
+                <span data-lang-only="en">
+                  For any inquiry regarding personal data, account deletion or app compliance on Apple App Store and Google Play:
+                </span>
+              </p>
+              <p class="mono">
+                <a href="mailto:anirouddh@gmail.com">anirouddh@gmail.com</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <dialog id="shot-lightbox" class="lightbox" closedby="any" aria-labelledby="lightbox-heading">
+      <div class="lightbox-head">
+        <h2 id="lightbox-heading" style="font-size: 1.25rem;" data-lightbox-title>Capture</h2>
+        <button class="icon-btn" type="button" data-lightbox-close aria-label="Fermer l'aperçu" data-aria-fr="Fermer l'aperçu" data-aria-en="Close preview">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <path d="M6 6l12 12M18 6L6 18" />
+          </svg>
+        </button>
+      </div>
+      <picture>
+        <source data-lightbox-avif type="image/avif" srcset="/assets/images/thetelugu/home-780.avif" />
+        <source data-lightbox-webp type="image/webp" srcset="/assets/images/thetelugu/home-780.webp" />
+        <img
+          class="lightbox-img"
+          data-lightbox-img
+          src="/assets/images/thetelugu/home-780.png"
+          width="780"
+          height="1688"
+          alt="Capture plein écran de The Telugu"
+        />
+      </picture>
+      <p class="lightbox-caption" data-lightbox-caption></p>
+    </dialog>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="stack-xs">
+          <span>
+            © 2026 Anirouddh ·
+            <span data-lang-only="fr">Vitrine personnelle.</span>
+            <span data-lang-only="en">Personal showcase.</span>
+          </span>
+          <span style="font-size: 0.82rem;">
+            <span data-lang-only="fr">Support Stores &amp; mentions légales :</span>
+            <span data-lang-only="en">App stores support &amp; legal notice:</span>
+            <a href="mailto:anirouddh@gmail.com">anirouddh@gmail.com</a>
+          </span>
+        </div>
+
+        <ul class="footer-links">
+          <li>
+            <a href="/">
+              <span data-lang-only="fr">Accueil</span>
+              <span data-lang-only="en">Home</span>
+            </a>
+          </li>
+          <li>
+            <a href="/projets/">
+              <span data-lang-only="fr">Projets</span>
+              <span data-lang-only="en">Projects</span>
+            </a>
+          </li>
+          <li>
+            <a href="/thetelugu/confidentialite/">
+              <span data-lang-only="fr">Confidentialité</span>
+              <span data-lang-only="en">Privacy</span>
+            </a>
+          </li>
+          <li>
+            <a href="/thetelugu/conditions/">
+              <span data-lang-only="fr">Conditions</span>
+              <span data-lang-only="en">Terms</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>

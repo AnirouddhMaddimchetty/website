@@ -1,0 +1,179 @@
+<!doctype html>
+<html
+  lang="fr"
+  data-lang="fr"
+  data-title-fr="Page introuvable (404) — Anirouddh"
+  data-title-en="Page not found (404) — Anirouddh"
+  data-desc-fr="La page demandée n'existe pas ou a été déplacée."
+  data-desc-en="The requested page could not be found."
+>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="robots" content="noindex" />
+    <title>Page introuvable (404) — Anirouddh</title>
+    <meta name="description" content="La page demandée n'existe pas ou a été déplacée." />
+    <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png" />
+    <script>
+      (() => {
+        const params = new URLSearchParams(location.search);
+        const qLang = params.get('lang');
+        const sLang = localStorage.getItem('site-lang');
+        const lang = qLang === 'en' || qLang === 'fr' ? qLang : sLang === 'en' || sLang === 'fr' ? sLang : 'fr';
+        document.documentElement.lang = lang;
+        document.documentElement.dataset.lang = lang;
+        const theme = localStorage.getItem('color-scheme');
+        if (theme === 'light' || theme === 'dark') {
+          document.head.querySelector('meta[name="color-scheme"]')?.setAttribute('content', theme);
+        }
+      })();
+    </script>
+    <link rel="stylesheet" href="/styles/site.css" />
+    <script type="module" src="/scripts/site.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">
+      <span data-lang-only="fr">Aller au contenu principal</span>
+      <span data-lang-only="en">Skip to main content</span>
+    </a>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="/">
+          <span>anirouddh<span class="brand-dot">.</span></span>
+        </a>
+
+        <nav class="primary-nav" aria-label="Navigation principale" data-aria-fr="Navigation principale" data-aria-en="Primary navigation">
+          <ul class="nav-list">
+            <li>
+              <a class="nav-link" href="/">
+                <span data-lang-only="fr">Accueil</span>
+                <span data-lang-only="en">Home</span>
+              </a>
+            </li>
+            <li>
+              <a class="nav-link" href="/projets/">
+                <span data-lang-only="fr">Projets</span>
+                <span data-lang-only="en">Projects</span>
+              </a>
+            </li>
+            <li>
+              <a class="nav-link" href="/thetelugu/">The Telugu</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="header-controls">
+          <div class="lang-switch lang-switch--desktop" role="group" aria-label="Langue du site" data-aria-fr="Langue du site" data-aria-en="Site language">
+            <button class="lang-btn" type="button" data-set-lang="fr" aria-pressed="true">FR</button>
+            <button class="lang-btn" type="button" data-set-lang="en" aria-pressed="false">EN</button>
+          </div>
+
+          <button class="icon-btn" type="button" data-theme-toggle aria-pressed="false" aria-label="Passer au thème sombre">
+            <svg class="theme-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+            </svg>
+            <svg class="theme-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="4" />
+              <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" />
+            </svg>
+          </button>
+
+          <button class="icon-btn menu-toggle" type="button" popovertarget="mobile-nav" aria-label="Ouvrir le menu" data-aria-fr="Ouvrir le menu" data-aria-en="Open menu">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+              <path d="M4 7h16M4 12h16M4 17h16" />
+            </svg>
+            <span>Menu</span>
+          </button>
+        </div>
+      </div>
+
+      <div id="mobile-nav" class="nav-popover" popover="auto">
+        <ul class="mobile-nav-list">
+          <li>
+            <a href="/">
+              <span data-lang-only="fr">Accueil</span>
+              <span data-lang-only="en">Home</span>
+            </a>
+          </li>
+          <li>
+            <a href="/projets/">
+              <span data-lang-only="fr">Projets</span>
+              <span data-lang-only="en">Projects</span>
+            </a>
+          </li>
+          <li><a href="/thetelugu/">The Telugu</a></li>
+        </ul>
+        <div class="popover-footer">
+          <span class="mono" style="font-size: 0.76rem; color: var(--ink-muted);">
+            <span data-lang-only="fr">Langue</span>
+            <span data-lang-only="en">Language</span>
+          </span>
+          <div class="lang-switch" role="group" aria-label="Langue du site" data-aria-fr="Langue du site" data-aria-en="Site language">
+            <button class="lang-btn" type="button" data-set-lang="fr" aria-pressed="true">FR</button>
+            <button class="lang-btn" type="button" data-set-lang="en" aria-pressed="false">EN</button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section class="hero section--flush-top">
+        <div class="container stack-md prose">
+          <span class="eyebrow">404</span>
+          <h1>
+            <span data-lang-only="fr">Cette page n'existe plus ou a changé d'adresse.</span>
+            <span data-lang-only="en">This page cannot be found or has moved.</span>
+          </h1>
+          <p class="hero-lead">
+            <span data-lang-only="fr">
+              Retrouvez l'accueil de la vitrine, l'index des projets ou la fiche complète de The Telugu ci-dessous.
+            </span>
+            <span data-lang-only="en">
+              You can return to the showcase home page, the projects archive or The Telugu app page below.
+            </span>
+          </p>
+          <div class="actions-row">
+            <a class="btn btn-primary" href="/">
+              <span data-lang-only="fr">Retour à l'accueil</span>
+              <span data-lang-only="en">Back to home</span>
+            </a>
+            <a class="btn btn-secondary" href="/thetelugu/">The Telugu</a>
+            <a class="btn btn-secondary" href="/projets/">
+              <span data-lang-only="fr">Projets</span>
+              <span data-lang-only="en">Projects</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="stack-xs">
+          <span>© 2026 Anirouddh</span>
+          <span style="font-size: 0.82rem;">
+            <a href="mailto:anirouddh@gmail.com">anirouddh@gmail.com</a>
+          </span>
+        </div>
+        <ul class="footer-links">
+          <li>
+            <a href="/">
+              <span data-lang-only="fr">Accueil</span>
+              <span data-lang-only="en">Home</span>
+            </a>
+          </li>
+          <li>
+            <a href="/projets/">
+              <span data-lang-only="fr">Projets</span>
+              <span data-lang-only="en">Projects</span>
+            </a>
+          </li>
+          <li><a href="/thetelugu/">The Telugu</a></li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>

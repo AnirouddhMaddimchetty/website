@@ -1,0 +1,476 @@
+<!doctype html>
+<html
+  lang="fr"
+  data-lang="fr"
+  data-title-fr="Politique de confidentialité — The Telugu : Learn & Play"
+  data-title-en="Privacy Policy — The Telugu: Learn & Play"
+  data-desc-fr="Politique de confidentialité complète et à jour de The Telugu : Learn & Play (v1.5) — données locales Svarna Marga, Firebase, modération Gemini, AdMob UMP/ATT et suppression de compte."
+  data-desc-en="Complete up-to-date Privacy Policy for The Telugu: Learn & Play (v1.5) — local Svarna Marga learning, Firebase, Gemini nickname check, AdMob UMP/ATT and account deletion."
+>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <title>Politique de confidentialité — The Telugu : Learn &amp; Play</title>
+    <meta
+      name="description"
+      content="Politique de confidentialité complète et à jour de The Telugu : Learn &amp; Play (v1.5) — données locales Svarna Marga, Firebase, modération Gemini, AdMob UMP/ATT et suppression de compte."
+    />
+    <link rel="canonical" href="https://anirouddh.com/thetelugu/confidentialite/" />
+    <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png" />
+    <script>
+      (() => {
+        const params = new URLSearchParams(location.search);
+        const qLang = params.get('lang');
+        const sLang = localStorage.getItem('site-lang');
+        const lang = qLang === 'en' || qLang === 'fr' ? qLang : sLang === 'en' || sLang === 'fr' ? sLang : 'fr';
+        if (qLang === 'en' || qLang === 'fr') localStorage.setItem('site-lang', qLang);
+        document.documentElement.lang = lang;
+        document.documentElement.dataset.lang = lang;
+        const theme = localStorage.getItem('color-scheme');
+        if (theme === 'light' || theme === 'dark') {
+          document.head.querySelector('meta[name="color-scheme"]')?.setAttribute('content', theme);
+        }
+      })();
+    </script>
+    <link rel="stylesheet" href="/styles/site.css" />
+    <script type="module" src="/scripts/site.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">
+      <span data-lang-only="fr">Aller au contenu principal</span>
+      <span data-lang-only="en">Skip to main content</span>
+    </a>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="/">
+          <span>anirouddh<span class="brand-dot">.</span></span>
+        </a>
+
+        <nav class="primary-nav" aria-label="Navigation principale" data-aria-fr="Navigation principale" data-aria-en="Primary navigation">
+          <ul class="nav-list">
+            <li>
+              <a class="nav-link" href="/">
+                <span data-lang-only="fr">Accueil</span>
+                <span data-lang-only="en">Home</span>
+              </a>
+            </li>
+            <li>
+              <a class="nav-link" href="/projets/">
+                <span data-lang-only="fr">Projets</span>
+                <span data-lang-only="en">Projects</span>
+              </a>
+            </li>
+            <li>
+              <a class="nav-link" href="/thetelugu/" aria-current="page">The Telugu</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="header-controls">
+          <div class="lang-switch lang-switch--desktop" role="group" aria-label="Langue du site" data-aria-fr="Langue du site" data-aria-en="Site language">
+            <button class="lang-btn" type="button" data-set-lang="fr" aria-pressed="true">FR</button>
+            <button class="lang-btn" type="button" data-set-lang="en" aria-pressed="false">EN</button>
+          </div>
+
+          <button class="icon-btn" type="button" data-theme-toggle aria-pressed="false" aria-label="Passer au thème sombre">
+            <svg class="theme-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+            </svg>
+            <svg class="theme-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="4" />
+              <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" />
+            </svg>
+          </button>
+
+          <button class="icon-btn menu-toggle" type="button" popovertarget="mobile-nav" aria-label="Ouvrir le menu" data-aria-fr="Ouvrir le menu" data-aria-en="Open menu">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+              <path d="M4 7h16M4 12h16M4 17h16" />
+            </svg>
+            <span>Menu</span>
+          </button>
+        </div>
+      </div>
+
+      <div id="mobile-nav" class="nav-popover" popover="auto">
+        <ul class="mobile-nav-list">
+          <li>
+            <a href="/">
+              <span data-lang-only="fr">Accueil</span>
+              <span data-lang-only="en">Home</span>
+            </a>
+          </li>
+          <li>
+            <a href="/projets/">
+              <span data-lang-only="fr">Projets</span>
+              <span data-lang-only="en">Projects</span>
+            </a>
+          </li>
+          <li><a href="/thetelugu/">The Telugu</a></li>
+          <li>
+            <a href="/thetelugu/confidentialite/" aria-current="page">
+              <span data-lang-only="fr">Confidentialité (The Telugu)</span>
+              <span data-lang-only="en">Privacy (The Telugu)</span>
+            </a>
+          </li>
+          <li>
+            <a href="/thetelugu/conditions/">
+              <span data-lang-only="fr">Conditions (The Telugu)</span>
+              <span data-lang-only="en">Terms (The Telugu)</span>
+            </a>
+          </li>
+        </ul>
+        <div class="popover-footer">
+          <span class="mono" style="font-size: 0.76rem; color: var(--ink-muted);">
+            <span data-lang-only="fr">Langue</span>
+            <span data-lang-only="en">Language</span>
+          </span>
+          <div class="lang-switch" role="group" aria-label="Langue du site" data-aria-fr="Langue du site" data-aria-en="Site language">
+            <button class="lang-btn" type="button" data-set-lang="fr" aria-pressed="true">FR</button>
+            <button class="lang-btn" type="button" data-set-lang="en" aria-pressed="false">EN</button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section class="hero section--flush-top">
+        <div class="container prose stack-sm">
+          <p class="mono" style="font-size: 0.8rem;">
+            <a href="/thetelugu/">The Telugu : Learn &amp; Play</a>
+            <span aria-hidden="true"> / </span>
+            <span data-lang-only="fr">Confidentialité</span>
+            <span data-lang-only="en">Privacy</span>
+          </p>
+
+          <h1>
+            <span data-lang-only="fr">Politique de confidentialité</span>
+            <span data-lang-only="en">Privacy Policy</span>
+          </h1>
+
+          <p class="hero-lead">
+            <span data-lang-only="fr">
+              Explication claire et exhaustive des données traitées dans <strong>The Telugu : Learn &amp; Play</strong> (Android &amp; iOS), des traitements effectués localement sur votre appareil et de vos droits.
+            </span>
+            <span data-lang-only="en">
+              A clear, comprehensive overview of the data processed in <strong>The Telugu: Learn &amp; Play</strong> (Android &amp; iOS), what stays locally on your device, and your privacy rights.
+            </span>
+          </p>
+
+          <dl class="fact-sheet">
+            <div class="fact-item">
+              <dt><span data-lang-only="fr">Dernière mise à jour</span><span data-lang-only="en">Last updated</span></dt>
+              <dd><time datetime="2026-11-25">25 novembre 2026</time> · v1.5</dd>
+            </div>
+            <div class="fact-item">
+              <dt><span data-lang-only="fr">Éditeur &amp; responsable</span><span data-lang-only="en">Publisher &amp; controller</span></dt>
+              <dd>Anirouddh Maddimchetty (<a href="mailto:anirouddh@gmail.com">anirouddh@gmail.com</a>)</dd>
+            </div>
+            <div class="fact-item">
+              <dt><span data-lang-only="fr">Achats en argent réel</span><span data-lang-only="en">Real-money purchases</span></dt>
+              <dd><span data-lang-only="fr">Aucun (0 € d'achat intégré)</span><span data-lang-only="en">None (no paid In-App Purchases)</span></dd>
+            </div>
+            <div class="fact-item">
+              <dt><span data-lang-only="fr">IA adaptative pédagogique</span><span data-lang-only="en">Adaptive learning AI</span></dt>
+              <dd><span data-lang-only="fr">100 % locale sur l'appareil</span><span data-lang-only="en">100% on-device computation</span></dd>
+            </div>
+          </dl>
+
+          <nav class="legal-toc" aria-label="Sommaire de la politique" data-aria-fr="Sommaire de la politique" data-aria-en="Policy sections">
+            <div class="legal-toc-title">
+              <span data-lang-only="fr">Sommaire</span>
+              <span data-lang-only="en">Contents</span>
+            </div>
+            <ol>
+              <li><a href="#comptes"><span data-lang-only="fr">1. Comptes utilisateurs et mode invité</span><span data-lang-only="en">1. User accounts and guest mode</span></a></li>
+              <li><a href="#ia-locale"><span data-lang-only="fr">2. Parcours adaptatif local (Svarna Marga) et modération Gemini</span><span data-lang-only="en">2. Local adaptive path (Svarna Marga) and Gemini moderation</span></a></li>
+              <li><a href="#classements"><span data-lang-only="fr">3. Classements publics et statistiques communautaires</span><span data-lang-only="en">3. Public leaderboards and community statistics</span></a></li>
+              <li><a href="#firebase-telemetrie"><span data-lang-only="fr">4. Infrastructure Firebase, audio et télémétrie d'usage</span><span data-lang-only="en">4. Firebase infrastructure, audio delivery and usage telemetry</span></a></li>
+              <li><a href="#publicite"><span data-lang-only="fr">5. Publicités Google AdMob, consentement UMP (RGPD) et ATT (iOS)</span><span data-lang-only="en">5. Google AdMob ads, UMP consent (GDPR) and iOS ATT</span></a></li>
+              <li><a href="#permissions"><span data-lang-only="fr">6. Fonctionnalités locales et permissions de l'appareil</span><span data-lang-only="en">6. Device permissions and local features</span></a></li>
+              <li><a href="#droits-suppression"><span data-lang-only="fr">7. Conservation, suppression de compte et exercice de vos droits</span><span data-lang-only="en">7. Retention, account deletion and your privacy rights</span></a></li>
+            </ol>
+          </nav>
+
+          <section id="comptes" class="legal-section">
+            <h2>
+              <span data-lang-only="fr">1. Comptes utilisateurs et mode invité</span>
+              <span data-lang-only="en">1. User accounts and guest mode</span>
+            </h2>
+            <p>
+              <span data-lang-only="fr">
+                Vous pouvez utiliser <strong>The Telugu : Learn &amp; Play</strong> en mode <strong>Invité (Anonyme)</strong> ou créer un compte synchronisé.
+              </span>
+              <span data-lang-only="en">
+                You may use <strong>The Telugu: Learn &amp; Play</strong> either in <strong>Guest (Anonymous)</strong> mode or with a synchronized account.
+              </span>
+            </p>
+            <ul>
+              <li>
+                <span data-lang-only="fr">
+                  <strong>Mode Invité / Anonyme :</strong> votre progression locale (Hive / SQLite) et votre identifiant anonyme Firebase permettent de jouer immédiatement sans fournir d'e-mail ni de nom. Par mesure de minimisation, tout compte anonyme inactif est automatiquement supprimé après <strong>120 jours</strong> sans activité.
+                </span>
+                <span data-lang-only="en">
+                  <strong>Guest / Anonymous mode:</strong> your local progress (Hive / SQLite) and anonymous Firebase UID allow immediate access without supplying an email or real name. For data minimization, inactive anonymous accounts are automatically purged after <strong>120 days</strong> of inactivity.
+                </span>
+              </li>
+              <li>
+                <span data-lang-only="fr">
+                  <strong>Connexion synchronisée (Google Sign-In, Connexion avec Apple, E-mail par lien magique ou mot de passe) :</strong> nous enregistrons votre identifiant technique (UID), votre adresse e-mail (ou l'adresse relais fournie par Apple si vous choisissez « Masquer mon adresse e-mail »), votre pseudonyme, votre progression pédagogique, vos rangs (<em>Om</em>), votre solde et inventaire virtuel (<em>Vajralu</em>, cosmétiques, indices, boucliers de série) ainsi que vos quêtes. Pour prévenir toute usurpation, l'inscription par mot de passe est désactivée pour les adresses appartenant aux fournisseurs sociaux (tels que <code>@gmail.com</code>, <code>@icloud.com</code>, <code>@me.com</code> ou <code>@apple.com</code>), au profit des boutons OAuth officiels.
+                </span>
+                <span data-lang-only="en">
+                  <strong>Signed-in accounts (Google Sign-In, Sign in with Apple, passwordless email magic link or email/password):</strong> we store your technical UID, email address (including Apple private relay emails), chosen public nickname, study progress, <em>Om</em> ranks, virtual currency balance &amp; cosmetics (<em>Vajralu</em>, avatar frames, hints, streak shields) and quests. To protect account integrity, password registration is blocked for social OAuth domains (such as <code>@gmail.com</code>, <code>@icloud.com</code>, <code>@me.com</code> and <code>@apple.com</code>).
+                </span>
+              </li>
+            </ul>
+          </section>
+
+          <section id="ia-locale" class="legal-section">
+            <h2>
+              <span data-lang-only="fr">2. Parcours adaptatif local (Svarna Marga) et modération Gemini</span>
+              <span data-lang-only="en">2. Local adaptive path (Svarna Marga) and Gemini moderation</span>
+            </h2>
+            <p>
+              <span data-lang-only="fr">
+                Deux mécanismes distincts interviennent dans l'application avec une stricte séparation des données :
+              </span>
+              <span data-lang-only="en">
+                Two separate systems operate inside the app with strict data boundaries:
+              </span>
+            </p>
+            <ul>
+              <li>
+                <span data-lang-only="fr">
+                  <strong>Parcours personnalisé <em>Svarna Marga</em> &amp; compagnon <em>Chinni</em> (100 % local) :</strong> le calcul de votre plan sur 7 jours, l'algorithme de répétition espacée SM-2, le suivi des caractères difficiles, le profilage d'apprentissage et l'adaptation du rythme publicitaire s'exécutent <strong>exclusivement sur votre téléphone</strong>. Aucun historique d'exercices, score ou donnée personnelle n'est envoyé à une IA générative externe pour générer votre parcours.
+                </span>
+                <span data-lang-only="en">
+                  <strong><em>Svarna Marga</em> adaptive path &amp; <em>Chinni</em> companion (100% on-device):</strong> your 7-day learning plan, SM-2 spaced repetition scheduling, per-character mistake tracking, pace profiling and adaptive ad pacing run <strong>solely on your device</strong>. No learning history or personal profile is sent to external generative AI services.
+                </span>
+              </li>
+              <li>
+                <span data-lang-only="fr">
+                  <strong>Modération de pseudonyme via Google Gemini (<code>gemini-3.1-flash-lite</code>) :</strong> lorsque vous choisissez ou modifiez un pseudonyme public, celui-ci passe d'abord par une liste locale de mots interdits puis, si nécessaire, la <strong>seule chaîne de caractères du pseudonyme proposé</strong> est vérifiée par l'API Google Gemini afin d'écarter tout terme offensant ou inapproprié (en français, anglais ou télougou). Aucun e-mail, identifiant ni historique de jeu n'est transmis lors de ce contrôle.
+                </span>
+                <span data-lang-only="en">
+                  <strong>Nickname safety check via Google Gemini (<code>gemini-3.1-flash-lite</code>):</strong> when choosing or updating your public nickname, after local blocklist checks, <strong>only the proposed nickname string</strong> is checked with the Google Gemini API to prevent abusive or offensive names across French, English and Telugu. No email, UID or gameplay data accompanies this request.
+                </span>
+              </li>
+            </ul>
+          </section>
+
+          <section id="classements" class="legal-section">
+            <h2>
+              <span data-lang-only="fr">3. Classements publics et statistiques communautaires</span>
+              <span data-lang-only="en">3. Public leaderboards and community statistics</span>
+            </h2>
+            <ul>
+              <li>
+                <span data-lang-only="fr">
+                  <strong>Classements visibles :</strong> lorsque vous jouez aux modes d'arcade ou défis (<em>Classement global</em> et <em>Classements par mini-jeu</em>), votre <strong>pseudonyme</strong>, votre <strong>rang</strong>, votre <strong>score</strong> et vos <strong>attributs cosmétiques</strong> (cadre, style de pseudonyme) sont affichés aux autres joueurs. Votre adresse e-mail et votre identifiant privé ne sont jamais affichés.
+                </span>
+                <span data-lang-only="en">
+                  <strong>Visible leaderboards:</strong> when participating in arcade or ranked challenges (<em>Global ranking</em> and per-game challenge boards), your <strong>nickname</strong>, <strong>rank</strong>, <strong>score</strong> and chosen <strong>cosmetic styling</strong> (avatar frame, nickname style) are visible to other players. Your email and private account identifiers are never public.
+                </span>
+              </li>
+              <li>
+                <span data-lang-only="fr">
+                  <strong>Compteurs communautaires agrégés :</strong> une fonction serveur quotidienne additionne des métriques globales entièrement anonymisées (total d'utilisateurs, d'<em>Om</em> cumulés, de lettres maîtrisées et de parties jouées).
+                </span>
+                <span data-lang-only="en">
+                  <strong>Aggregated community counters:</strong> a daily scheduled Cloud Function computes anonymous global totals (users count, total <em>Om</em> XP, letters learned and arcade games played).
+                </span>
+              </li>
+            </ul>
+          </section>
+
+          <section id="firebase-telemetrie" class="legal-section">
+            <h2>
+              <span data-lang-only="fr">4. Infrastructure Firebase, audio et télémétrie d'usage</span>
+              <span data-lang-only="en">4. Firebase infrastructure, audio delivery and usage telemetry</span>
+            </h2>
+            <p>
+              <span data-lang-only="fr">
+                L'application repose sur les services <strong>Google Firebase</strong> (hébergement cloud sécurisé et transfert encadré selon les clauses contractuelles types applicables) :
+              </span>
+              <span data-lang-only="en">
+                The app relies on <strong>Google Firebase</strong> infrastructure for core functionality, reliability and security:
+              </span>
+            </p>
+            <ul>
+              <li>
+                <span data-lang-only="fr">
+                  <strong>Firebase Authentication &amp; Cloud Firestore :</strong> gestion des sessions, unicité des pseudonymes et sauvegarde synchronisée de la progression.
+                </span>
+                <span data-lang-only="en">
+                  <strong>Firebase Authentication &amp; Cloud Firestore:</strong> session management, nickname reservation and cloud progress synchronization.
+                </span>
+              </li>
+              <li>
+                <span data-lang-only="fr">
+                  <strong>Firebase Storage :</strong> téléchargement des fichiers audio de prononciation télougoue (<code>.mp3</code>) et des mises à jour différentielles de la base de données lexicale SQLite (3 541 mots et leçons associées).
+                </span>
+                <span data-lang-only="en">
+                  <strong>Firebase Storage:</strong> delivery of Telugu pronunciation <code>.mp3</code> audio assets and differential SQLite lexicon/lesson updates.
+                </span>
+              </li>
+              <li>
+                <span data-lang-only="fr">
+                  <strong>Firebase Analytics, Crashlytics &amp; Performance Monitoring :</strong> mesure technique des crashs, temps de réponse réseau/écran et événements d'usage agrégés.
+                </span>
+                <span data-lang-only="en">
+                  <strong>Firebase Analytics, Crashlytics &amp; Performance Monitoring:</strong> crash diagnostics, network/rendering latency and aggregated technical metrics.
+                </span>
+              </li>
+              <li>
+                <span data-lang-only="fr">
+                  <strong>Télémétrie d'expérience utilisateur (champ <code>telemetry</code>) :</strong> pour améliorer l'ergonomie et repérer les manques du dictionnaire, l'application enregistre des compteurs agrégés : écrans consultés, durée d'activité, clics sans effet, erreurs de chargement audio, statistiques de recherche dans le dictionnaire (incluant des termes de recherche sans résultat tronqués pour enrichir le lexique), ouvertures de rappels locaux, résumé du profil adaptatif et métriques techniques d'affichage publicitaire (entonnoir et revenus agrégés au niveau de l'impression ILRD).
+                </span>
+                <span data-lang-only="en">
+                  <strong>Aggregated UX telemetry (<code>telemetry</code> record):</strong> to improve usability and fix missing dictionary entries, the app records aggregated counters covering screen views, dwell time, dead taps, audio errors, dictionary search stats (including truncated zero-result queries to expand the word bank), notification opens, adaptive profile summary and ad funnel / impression-level revenue (ILRD) technical diagnostics.
+                </span>
+              </li>
+            </ul>
+          </section>
+
+          <section id="publicite" class="legal-section">
+            <h2>
+              <span data-lang-only="fr">5. Publicités Google AdMob, consentement UMP (RGPD) et ATT (iOS)</span>
+              <span data-lang-only="en">5. Google AdMob ads, UMP consent (GDPR) and iOS ATT</span>
+            </h2>
+            <p>
+              <span data-lang-only="fr">
+                The Telugu est financée exclusivement par la publicité via <strong>Google AdMob</strong> (aucun achat en argent réel ni abonnement). Les formats utilisés sont : les <strong>annonces interstitielles</strong>, les <strong>vidéos avec récompense</strong> (permettant notamment d'obtenir des <em>Vajralu</em> ou bonus volontaires) et les <strong>interstitielles avec récompense</strong> (aucune bannière fixe).
+              </span>
+              <span data-lang-only="en">
+                The Telugu is supported strictly through <strong>Google AdMob</strong> advertising (with zero real-money In-App Purchases or subscriptions). Only three formats are used: <strong>interstitial</strong>, <strong>rewarded video</strong> (for voluntary <em>Vajralu</em>/bonus rewards) and <strong>rewarded interstitial</strong> ads (no persistent banner ads).
+              </span>
+            </p>
+            <ul>
+              <li>
+                <span data-lang-only="fr">
+                  <strong>Consentement RGPD (Google UMP) :</strong> pour les utilisateurs situés dans l'Espace économique européen et au Royaume-Uni, votre choix sur les traceurs et la personnalisation publicitaire est recueilli via le module officiel <strong>Google User Messaging Platform (UMP)</strong>. Vous pouvez <strong>modifier ou retirer votre consentement à tout moment</strong> dans l'application via <em>Profil → Paramètres de confidentialité</em>.
+                </span>
+                <span data-lang-only="en">
+                  <strong>GDPR / EEA Consent (Google UMP):</strong> for EEA and UK users, advertising and storage consent is gathered through Google's <strong>User Messaging Platform (UMP)</strong>. You can <strong>review or withdraw consent at any time</strong> directly inside <em>Profile → Privacy Settings</em>.
+                </span>
+              </li>
+              <li>
+                <span data-lang-only="fr">
+                  <strong>App Tracking Transparency (iOS) &amp; Android <code>AD_ID</code> :</strong> sur iOS, une autorisation distincte (ATT) est sollicitée avant tout accès à l'identifiant publicitaire (IDFA) ; en cas de refus, aucune publicité basée sur le suivi inter-applications n'est servie (les réseaux SKAdNetwork d'Apple restent uniquement utilisés pour l'attribution agrégée sans identifiant personnel). Sur Android, l'utilisation de l'<code>AD_ID</code> respecte vos choix UMP et les réglages de votre appareil.
+                </span>
+                <span data-lang-only="en">
+                  <strong>App Tracking Transparency (iOS) &amp; Android <code>AD_ID</code>:</strong> on iOS, explicit ATT permission is requested before any access to IDFA; if declined, cross-app tracking is not used (Apple <code>SKAdNetwork</code> endpoints only provide privacy-preserving aggregated attribution). On Android, <code>AD_ID</code> strictly respects your UMP choice and OS ad settings.
+                </span>
+              </li>
+            </ul>
+          </section>
+
+          <section id="permissions" class="legal-section">
+            <h2>
+              <span data-lang-only="fr">6. Fonctionnalités locales et permissions de l'appareil</span>
+              <span data-lang-only="en">6. Device permissions and local features</span>
+            </h2>
+            <ul>
+              <li>
+                <span data-lang-only="fr">
+                  <strong>Synthèse vocale télougoue (<code>te-IN</code>) :</strong> utilise le moteur de synthèse vocale installé sur votre appareil pour énoncer mots et lettres.
+                </span>
+                <span data-lang-only="en">
+                  <strong>On-device Telugu Text-to-Speech (<code>te-IN</code>):</strong> relies on your device's built-in TTS engine to vocalize words and letters locally.
+                </span>
+              </li>
+              <li>
+                <span data-lang-only="fr">
+                  <strong>Rappels quotidiens locaux :</strong> si vous les activez, des notifications programmées localement (permissions Android <code>POST_NOTIFICATIONS</code>, <code>SCHEDULE_EXACT_ALARM</code>, <code>RECEIVE_BOOT_COMPLETED</code>, <code>VIBRATE</code>, <code>WAKE_LOCK</code>) vous rappellent votre séance, sans envoi de notifications marketing depuis un serveur distant.
+                </span>
+                <span data-lang-only="en">
+                  <strong>Local study reminders:</strong> when opted in, notifications are scheduled directly on-device (Android permissions <code>POST_NOTIFICATIONS</code>, <code>SCHEDULE_EXACT_ALARM</code>, <code>RECEIVE_BOOT_COMPLETED</code>, <code>VIBRATE</code>, <code>WAKE_LOCK</code>), with no remote marketing push server.
+                </span>
+              </li>
+              <li>
+                <span data-lang-only="fr">
+                  <strong>Mise à jour intégrée Android :</strong> vérification officielle Google Play permettant de signaler la disponibilité d'une version plus récente.
+                </span>
+                <span data-lang-only="en">
+                  <strong>Android In-App Updates:</strong> official Google Play prompt checking for newer application releases.
+                </span>
+              </li>
+            </ul>
+          </section>
+
+          <section id="droits-suppression" class="legal-section">
+            <h2>
+              <span data-lang-only="fr">7. Conservation, suppression de compte et exercice de vos droits</span>
+              <span data-lang-only="en">7. Retention, account deletion and your privacy rights</span>
+            </h2>
+            <p>
+              <span data-lang-only="fr">
+                Vos données sont conservées tant que votre compte reste actif (ou jusqu'à 120 jours d'inactivité pour les sessions anonymes invité).
+              </span>
+              <span data-lang-only="en">
+                Account data is retained while your account remains active (or up to 120 days of inactivity for anonymous guest sessions).
+              </span>
+            </p>
+            <ul>
+              <li>
+                <span data-lang-only="fr">
+                  <strong>Suppression immédiate depuis l'application :</strong> dans l'écran <em>Profil → Supprimer mon compte</em> (après confirmation et ré-authentification de sécurité), l'application efface de manière irréversible votre compte Firebase Auth, votre profil <code>users/{uid}</code>, votre pseudonyme réservé <code>usernames/{pseudonyme}</code>, votre classement global et l'ensemble de vos scores enregistrés dans les mini-jeux.
+                </span>
+                <span data-lang-only="en">
+                  <strong>Immediate in-app deletion:</strong> under <em>Profile → Delete Account</em> (after security re-authentication), the app permanently deletes your Firebase Auth user, Firestore document <code>users/{uid}</code>, reserved nickname <code>usernames/{nickname}</code>, global leaderboard record and all recorded mini-game scores.
+                </span>
+              </li>
+              <li>
+                <span data-lang-only="fr">
+                  <strong>Exercer vos droits RGPD / demande externe :</strong> si vous n'avez plus accès à votre appareil ou souhaitez exercer vos droits d'accès, de rectification, d'effacement, de limitation, d'opposition ou de portabilité, écrivez à <a href="mailto:anirouddh@gmail.com">anirouddh@gmail.com</a>. Vous disposez également du droit d'introduire une réclamation auprès de votre autorité nationale de contrôle (en France, la CNIL).
+                </span>
+                <span data-lang-only="en">
+                  <strong>Exercising your rights / external deletion requests:</strong> if you no longer have access to your device or wish to exercise your rights of access, rectification, erasure, restriction, objection or portability, write to <a href="mailto:anirouddh@gmail.com">anirouddh@gmail.com</a>. You also have the right to lodge a complaint with your local data protection authority (such as the CNIL in France).
+                </span>
+              </li>
+              <li>
+                <span data-lang-only="fr">
+                  <strong>Public &amp; protection des mineurs :</strong> The Telugu s'adresse au grand public dans un cadre éducatif et ne demande pas d'informations personnelles nominatives pour jouer en mode Invité. Si un parent ou tuteur légal constate qu'un enfant a fourni des données via une authentification sans son consentement, il peut demander leur suppression immédiate à <a href="mailto:anirouddh@gmail.com">anirouddh@gmail.com</a>.
+                </span>
+                <span data-lang-only="en">
+                  <strong>Children's privacy:</strong> The Telugu is a general-audience educational app requiring zero personal details in Guest mode. If a parent or guardian believes a child provided personal data through a signed-in account without consent, please write to <a href="mailto:anirouddh@gmail.com">anirouddh@gmail.com</a> for prompt deletion.
+                </span>
+              </li>
+            </ul>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="stack-xs">
+          <span>© 2026 Anirouddh · The Telugu : Learn &amp; Play</span>
+          <span style="font-size: 0.82rem;">
+            <span data-lang-only="fr">Contact légal &amp; confidentialité :</span>
+            <span data-lang-only="en">Legal &amp; privacy contact:</span>
+            <a href="mailto:anirouddh@gmail.com">anirouddh@gmail.com</a>
+          </span>
+        </div>
+
+        <ul class="footer-links">
+          <li>
+            <a href="/">
+              <span data-lang-only="fr">Accueil</span>
+              <span data-lang-only="en">Home</span>
+            </a>
+          </li>
+          <li><a href="/thetelugu/">The Telugu</a></li>
+          <li>
+            <a href="/thetelugu/conditions/">
+              <span data-lang-only="fr">Conditions d'utilisation</span>
+              <span data-lang-only="en">Terms of Use</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>

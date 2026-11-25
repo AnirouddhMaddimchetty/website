@@ -1,0 +1,301 @@
+<!doctype html>
+<html
+  lang="fr"
+  data-lang="fr"
+  data-title-fr="Projets — Anirouddh"
+  data-title-en="Projects — Anirouddh"
+  data-desc-fr="Catalogue des créations d'Anirouddh : l'application The Telugu : Learn & Play publiée sur iOS et Android, et les chantiers de jeux en développement."
+  data-desc-en="Catalog of Anirouddh's creations: the published iOS and Android app The Telugu: Learn & Play, and indie game projects in development."
+>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <title>Projets — Anirouddh</title>
+    <meta
+      name="description"
+      content="Catalogue des créations d'Anirouddh : l'application The Telugu : Learn &amp; Play publiée sur iOS et Android, et les chantiers de jeux en développement."
+    />
+    <link rel="canonical" href="https://anirouddh.com/projets/" />
+    <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png" />
+    <script>
+      (() => {
+        const params = new URLSearchParams(location.search);
+        const qLang = params.get('lang');
+        const sLang = localStorage.getItem('site-lang');
+        const lang = qLang === 'en' || qLang === 'fr' ? qLang : sLang === 'en' || sLang === 'fr' ? sLang : 'fr';
+        if (qLang === 'en' || qLang === 'fr') localStorage.setItem('site-lang', qLang);
+        document.documentElement.lang = lang;
+        document.documentElement.dataset.lang = lang;
+        const theme = localStorage.getItem('color-scheme');
+        if (theme === 'light' || theme === 'dark') {
+          document.head.querySelector('meta[name="color-scheme"]')?.setAttribute('content', theme);
+        }
+      })();
+    </script>
+    <link rel="stylesheet" href="/styles/site.css" />
+    <script type="module" src="/scripts/site.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">
+      <span data-lang-only="fr">Aller au contenu principal</span>
+      <span data-lang-only="en">Skip to main content</span>
+    </a>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="/">
+          <span>anirouddh<span class="brand-dot">.</span></span>
+        </a>
+
+        <nav class="primary-nav" aria-label="Navigation principale" data-aria-fr="Navigation principale" data-aria-en="Primary navigation">
+          <ul class="nav-list">
+            <li>
+              <a class="nav-link" href="/">
+                <span data-lang-only="fr">Accueil</span>
+                <span data-lang-only="en">Home</span>
+              </a>
+            </li>
+            <li>
+              <a class="nav-link" href="/projets/" aria-current="page">
+                <span data-lang-only="fr">Projets</span>
+                <span data-lang-only="en">Projects</span>
+              </a>
+            </li>
+            <li>
+              <a class="nav-link" href="/thetelugu/">The Telugu</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="header-controls">
+          <div class="lang-switch lang-switch--desktop" role="group" aria-label="Langue du site" data-aria-fr="Langue du site" data-aria-en="Site language">
+            <button class="lang-btn" type="button" data-set-lang="fr" aria-pressed="true">FR</button>
+            <button class="lang-btn" type="button" data-set-lang="en" aria-pressed="false">EN</button>
+          </div>
+
+          <button class="icon-btn" type="button" data-theme-toggle aria-pressed="false" aria-label="Passer au thème sombre">
+            <svg class="theme-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+            </svg>
+            <svg class="theme-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="4" />
+              <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" />
+            </svg>
+          </button>
+
+          <button class="icon-btn menu-toggle" type="button" popovertarget="mobile-nav" aria-label="Ouvrir le menu" data-aria-fr="Ouvrir le menu" data-aria-en="Open menu">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+              <path d="M4 7h16M4 12h16M4 17h16" />
+            </svg>
+            <span>Menu</span>
+          </button>
+        </div>
+      </div>
+
+      <div id="mobile-nav" class="nav-popover" popover="auto">
+        <ul class="mobile-nav-list">
+          <li>
+            <a href="/">
+              <span data-lang-only="fr">Accueil</span>
+              <span data-lang-only="en">Home</span>
+            </a>
+          </li>
+          <li>
+            <a href="/projets/" aria-current="page">
+              <span data-lang-only="fr">Projets</span>
+              <span data-lang-only="en">Projects</span>
+            </a>
+          </li>
+          <li>
+            <a href="/thetelugu/">The Telugu</a>
+          </li>
+          <li>
+            <a href="/thetelugu/confidentialite/">
+              <span data-lang-only="fr">Confidentialité (The Telugu)</span>
+              <span data-lang-only="en">Privacy (The Telugu)</span>
+            </a>
+          </li>
+          <li>
+            <a href="/thetelugu/conditions/">
+              <span data-lang-only="fr">Conditions (The Telugu)</span>
+              <span data-lang-only="en">Terms (The Telugu)</span>
+            </a>
+          </li>
+        </ul>
+        <div class="popover-footer">
+          <span class="mono" style="font-size: 0.76rem; color: var(--ink-muted);">
+            <span data-lang-only="fr">Langue</span>
+            <span data-lang-only="en">Language</span>
+          </span>
+          <div class="lang-switch" role="group" aria-label="Langue du site" data-aria-fr="Langue du site" data-aria-en="Site language">
+            <button class="lang-btn" type="button" data-set-lang="fr" aria-pressed="true">FR</button>
+            <button class="lang-btn" type="button" data-set-lang="en" aria-pressed="false">EN</button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section class="hero section--flush-top">
+        <div class="container stack-md">
+          <span class="eyebrow">
+            <span data-lang-only="fr">Index des créations</span>
+            <span data-lang-only="en">Works index</span>
+          </span>
+          <h1>
+            <span data-lang-only="fr">Projets publiés &amp; chantiers en cours.</span>
+            <span data-lang-only="en">Published apps &amp; works in progress.</span>
+          </h1>
+          <p class="hero-lead">
+            <span data-lang-only="fr">
+              Un inventaire simple et tenu à jour de ce qui est déjà disponible entre vos mains et de ce qui mûrit en arrière-plan.
+            </span>
+            <span data-lang-only="en">
+              A straightforward, up-to-date inventory of what is already released and what is quietly taking shape behind the scenes.
+            </span>
+          </p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="project-list">
+            <article class="project-row">
+              <div class="project-num">01</div>
+              <div class="project-body">
+                <div class="project-meta">
+                  <span class="badge badge--saffron">
+                    <span data-lang-only="fr">Disponible · v1.5</span>
+                    <span data-lang-only="en">Released · v1.5</span>
+                  </span>
+                  <span class="badge">iOS &amp; Android</span>
+                  <span class="badge">Flutter · Firebase · SQLite</span>
+                </div>
+                <h2>The Telugu : Learn &amp; Play</h2>
+                <p class="prose">
+                  <span data-lang-only="fr">
+                    Application mobile dédiée à l'apprentissage de l'écriture et du vocabulaire télougou : bibliothèque <em>Akṣarālu</em> &amp; <em>Padālu</em>, tracé guidé au doigt, dictionnaire de 3 541 mots, parcours adaptatif local <em>Svarna Marga</em> avec le compagnon <em>Chinni</em>, mini-jeux d'arcade et défis classés sans aucun achat intégré payant.
+                  </span>
+                  <span data-lang-only="en">
+                    Mobile application dedicated to learning Telugu script and vocabulary: <em>Akṣarālu</em> &amp; <em>Padālu</em> books, finger-guided stroke tracing, 3,541-word dictionary, local adaptive journey <em>Svarna Marga</em> with companion <em>Chinni</em>, arcade mini-games and ranked challenges with zero real-money in-app purchases.
+                  </span>
+                </p>
+                <div class="actions-row" style="margin-block-start: 0.4rem;">
+                  <a class="btn btn-primary" href="/thetelugu/">
+                    <span data-lang-only="fr">Ouvrir la présentation</span>
+                    <span data-lang-only="en">Open showcase</span>
+                  </a>
+                  <a class="btn btn-secondary" href="https://apps.apple.com/fr/app/the-telugu-learn-play/id6762086815" rel="noopener noreferrer">
+                    App Store
+                  </a>
+                  <a class="btn btn-secondary" href="https://play.google.com/store/apps/details?id=com.anirouddh.TheTelugu" rel="noopener noreferrer">
+                    Google Play
+                  </a>
+                </div>
+                <div class="actions-row" style="font-size: 0.9rem;">
+                  <a href="/thetelugu/confidentialite/">
+                    <span data-lang-only="fr">Politique de confidentialité</span>
+                    <span data-lang-only="en">Privacy Policy</span>
+                  </a>
+                  <span aria-hidden="true">·</span>
+                  <a href="/thetelugu/conditions/">
+                    <span data-lang-only="fr">Conditions d'utilisation</span>
+                    <span data-lang-only="en">Terms of Use</span>
+                  </a>
+                </div>
+              </div>
+              <div>
+                <picture>
+                  <source type="image/avif" srcset="/thetelugu/assets/logo-128.avif" />
+                  <source type="image/webp" srcset="/thetelugu/assets/logo-128.webp" />
+                  <img
+                    class="app-icon"
+                    src="/thetelugu/assets/logo.png"
+                    width="68"
+                    height="68"
+                    loading="lazy"
+                    alt="Icône de l'application The Telugu"
+                    data-alt-fr="Icône de l'application The Telugu"
+                    data-alt-en="The Telugu app icon"
+                  />
+                </picture>
+              </div>
+            </article>
+
+            <article class="project-row" data-reveal>
+              <div class="project-num">02</div>
+              <div class="project-body">
+                <div class="project-meta">
+                  <span class="badge badge--turquoise">
+                    <span data-lang-only="fr">En développement · Pas pour maintenant</span>
+                    <span data-lang-only="en">In development · Not soon</span>
+                  </span>
+                  <span class="badge">
+                    <span data-lang-only="fr">Jeux vidéo indépendants</span>
+                    <span data-lang-only="en">Indie games</span>
+                  </span>
+                </div>
+                <h2>
+                  <span data-lang-only="fr">Idées de jeux en gestation</span>
+                  <span data-lang-only="en">Game concepts in incubation</span>
+                </h2>
+                <p class="prose">
+                  <span data-lang-only="fr">
+                    Plusieurs pistes de jeux vidéo sont en cours d'esquisse et d'expérimentation côté gameplay et architecture. Ce sont des chantiers au long cours, sans date de sortie annoncée ni promesse hâtive.
+                  </span>
+                  <span data-lang-only="en">
+                    Several indie game ideas are being sketched and prototyped around gameplay loops and systems. These are long-horizon projects with no announced release window yet.
+                  </span>
+                </p>
+              </div>
+              <div class="mono" style="font-size: 0.78rem; color: var(--ink-muted);">
+                TBA
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="stack-xs">
+          <span>
+            © 2026 Anirouddh ·
+            <span data-lang-only="fr">Vitrine personnelle.</span>
+            <span data-lang-only="en">Personal showcase.</span>
+          </span>
+          <span style="font-size: 0.82rem;">
+            <span data-lang-only="fr">Support Stores &amp; mentions légales :</span>
+            <span data-lang-only="en">App stores support &amp; legal notice:</span>
+            <a href="mailto:anirouddh@gmail.com">anirouddh@gmail.com</a>
+          </span>
+        </div>
+
+        <ul class="footer-links">
+          <li>
+            <a href="/">
+              <span data-lang-only="fr">Accueil</span>
+              <span data-lang-only="en">Home</span>
+            </a>
+          </li>
+          <li><a href="/thetelugu/">The Telugu</a></li>
+          <li>
+            <a href="/thetelugu/confidentialite/">
+              <span data-lang-only="fr">Confidentialité</span>
+              <span data-lang-only="en">Privacy</span>
+            </a>
+          </li>
+          <li>
+            <a href="/thetelugu/conditions/">
+              <span data-lang-only="fr">Conditions</span>
+              <span data-lang-only="en">Terms</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>
